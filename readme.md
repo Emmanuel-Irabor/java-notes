@@ -82,7 +82,109 @@
         public void test();
     }
 ```
+
 ---
+
+
+##### Type casting
+```java
+    // type casting
+    int a = 10;
+    float b = a;
+    int c = (int) b;
+```
+
+---
+
+##### Type promotion
+```java
+    // type promotion
+    byte a = 10;
+    int b = a;
+    int c = 10;
+    long d = c;
+    float e = d;
+    double f = e;
+```
+
+---
+
+##### Type conversion
+```java
+    // type conversion
+    int a = 10;
+    String b = String.valueOf(a);
+    int c = Integer.parseInt(b);
+```
+
+---
+
+##### String concatenation
+```java
+    // string concatenation
+    String a = "Hello";
+    String b = "World";
+    String c = a + b;
+```
+
+---
+
+##### String comparison
+```java
+    // string comparison
+    String a = "Hello";
+    String b = "World";
+    boolean c = a.equals(b);
+```
+
+---
+
+
+##### String format
+```java
+    // string format
+    String a = String.format("Hello %s", "World");
+```
+
+```java
+public class Main {
+    public static void main(String[] args) {
+        String name = "Farhan";
+        int age = 27;
+
+        String formattedString = String.format("My name is %s and I'm %d years old.", name, age);
+
+        System.out.println(formattedString);
+    }
+
+}
+
+```
+
+
+---
+
+##### type of
+```java
+    // type of
+    int a = 10;
+    String b = "Hello";
+    System.out.println(a instanceof Integer);
+    System.out.println(b instanceof String);
+```
+
+```java
+   Double result = Math.random() * 100;
+        System.out.println(result.toString());
+        // type of result
+        System.out.println(result.getClass().getName());
+        // type of result
+        System.out.println(result instanceof Double);
+```
+
+---
+
+
 
 #### Operators
 ##### Arithmetic operators ( +, -, *, /, %, ++, -- )
@@ -372,6 +474,117 @@ class Lang{
 
 ---
 
+##### Break and Continue
+- Break
+```java
+        for (int i = 0; i < 10; i++) {
+            if (i == 5) {
+                break;
+            }
+            System.out.println(i);
+        }
+```
+
+- Continue
+```java
+        for (int i = 0; i < 10; i++) {
+            if (i == 5) {
+                continue;
+            }
+            System.out.println(i);
+        }
+```
+
+---
+
+##### Loops and Array
+
+```java
+        int[] a = {1, 2, 3, 4, 5};
+        // for loop
+        for (int i = 0; i < a.length; i++) {
+            System.out.println(a[i]);
+        }
+        // while loop
+        int i = 0;
+        while (i < a.length) {
+            System.out.println(a[i]);
+            i++;
+        }
+        // do-while loop
+        int i = 0;
+        do {
+            System.out.println(a[i]);
+            i++;
+        } while (i < a.length);
+        // enhanced for loop
+        for (int i : a) {
+            System.out.println(i);
+        }
+```
+
+
+##### Loops and String
+```java
+        String str = "Hello World";
+        // for loop
+        for (int i = 0; i < str.length(); i++) {
+            System.out.println(str.charAt(i));
+        }
+        // while loop
+        int i = 0;
+        while (i < str.length()) {
+            System.out.println(str.charAt(i));
+            i++;
+        }
+        // do-while loop
+        int i = 0;
+        do {
+            System.out.println(str.charAt(i));
+            i++;
+        } while (i < str.length());
+        // enhanced for loop
+        for (char c : str.toCharArray()) {
+            System.out.println(c);
+        }
+```
+
+
+##### Loops using Array streams
+```java
+import java.util.Arrays;
+
+public class Main {
+   public static void main(String... args) {
+    // Loops
+      int [] numbers ={2,3,4,5,623,23};
+
+      Arrays.stream(numbers).forEach(System.out::println);
+   }
+
+}
+```
+
+
+
+---
+
+##### Decrements and Increments
+- Pre-increment, Post-increment, Pre-decrement, Post-decrement
+```java
+        int a = 10;
+        // pre-increment - the value of a is incremented before the assignment
+        ++a;
+        // post-increment - the value of a is incremented after the assignment
+        a++;
+        // pre-decrement - the value of a is decremented before the assignment
+        --a;
+        // post-decrement - the value of a is decremented after the assignment
+        a--;
+```
+
+---
+
 ##### Conditional Statements
 - If, If-else, If-else-if, Switch
 ```java
@@ -430,7 +643,7 @@ private | Y | N | N | N
 
 ---
 
-- Arrays
+##### Arrays
 Arrays are used to store multiple values in a single variable, instead of declaring separate variables for each value.
 
 ```java
@@ -604,6 +817,21 @@ public class Simple {
 ---
 
 
+##### Arrays and indexes 
+```java
+        int[] a = {1, 2, 3, 4, 5};
+        System.out.println(a[0]);
+        System.out.println(a[1]);
+        System.out.println(a[2]);
+        System.out.println(a[3]);
+        System.out.println(a[4]);
+        // System.out.println(a[5]); // ArrayIndexOutOfBoundsException
+        // output: 1 2 3 4 5
+```
+
+---
+
+
 ##### Mixed Data Types
 ```java
         Object[] a = {1, "Hello", 2.5};
@@ -621,6 +849,66 @@ public class Simple {
 ##### Jagged Arrays
 ```java
         int[][] a = {{1, 2}, {3, 4, 5}};
+```
+
+---
+
+##### Classes and Objects
+Classes are the basics of object-oriented programming. A class is a user-defined blueprint or prototype from which objects are created. It represents the set of properties or methods that are common to all objects of one type.
+
+```java
+public class Student {
+    int id;
+    String name;
+}
+```
+
+---
+
+##### Objects
+
+Objects are the instances of a class. An object contains an address and takes up some space in memory. It can be assigned to a variable.
+
+```java
+public class Student {
+    int id;
+    String name;
+}
+```
+
+```java
+public class Simple {
+    public static void main(String... args) {
+        Student s1 = new Student();
+        s1.id = 1;
+        s1.name = "John";
+        System.out.println(s1.id + " " + s1.name);
+    }
+}
+```
+
+---
+
+##### Fields
+
+Fields are variables that belong to the class. Fields are also known as attributes or properties.
+
+```java
+public class Student { // this is a class
+    int id; // this is a field
+    String name;
+}
+```
+
+```java
+public class Simple {
+    public static void main(String... args) {
+        Student s1 = new Student();
+        s1.id = 1;
+        s1.name = "John";
+        System.out.println(s1.id + " " + s1.name);
+    }
+}
 ```
 
 ---
@@ -746,6 +1034,64 @@ public class Student {
 
 ---
 
+##### Getters and Setters
+Getters and setters are methods that provide access to the object’s properties. Getters return the value of the property, and setters set the value of the property.
+
+```java
+public class Student {
+    private int id;
+    private String name;
+
+    public int getId() { // getter  for id - returns the value of id
+        return id;
+    }
+
+    public void setId(int id) { // setter for id - sets the value of id
+        this.id = id;
+    }
+
+    public String getName() { // getter for name - returns the value of name
+        return name;
+    }
+
+    public void setName(String name) { // setter for name - sets the value of name
+        this.name = name;
+    }
+}
+```
+
+
+---
+
+##### toString() Method
+The toString() method returns the string representation of the object. If you print any object, java compiler internally invokes the toString() method on the object. So, overriding the toString() method, returns the desired output, it can be the state of an object etc. depending on your implementation.
+
+```java
+public class Student {
+    int id;
+    String name;
+    public Student(int id, String name) {
+        this.id = id;
+        this.name = name;
+    }
+    public String toString() {
+        return id + " " + name;
+    }
+    public static void main(String[] args) {
+        Student s1 = new Student(111, "Karan");
+        Student s2 = new Student(222, "Aryan");
+        System.out.println(s1);
+        System.out.println(s2);
+    }
+}
+```
+
+
+
+
+
+---
+
 ##### Inheritance
 Inheritance is a mechanism in which one object acquires all the properties and behaviors of a parent object. It is an important part of OOPs (Object Oriented programming system). It is used to achieve runtime polymorphism.
 
@@ -795,6 +1141,32 @@ public class Simple {
     }
 }
 ```
+
+---
+
+#### Method overloading
+Method overloading is a feature that allows a class to have more than one method having the same name, if their argument lists are different. It is similar to constructor overloading in Java, that allows a class to have more than one constructor having different argument lists.
+
+```java
+public class MethodOverloading {
+    public static void main(String[] args) {
+        System.out.println(Add(11, 11));
+        System.out.println(Add(11, 11, 11));
+        System.out.println(Add(11.5, 11.5));
+    }
+    public static int Add(int a, int b) {
+        return a + b;
+    }
+    public static int Add(int a, int b, int c) {
+        return a + b + c;
+    }
+    public static double Add(double a, double b) {
+        return a + b;
+    }
+}
+```
+
+
 
 ---
 
@@ -991,6 +1363,63 @@ public class TestEncapsulation {
 ```
 
 ---
+
+
+#####  Enum
+Enum is a special "class" that represents a group of constants (unchangeable variables, like final variables).
+
+```java
+enum Level {
+    LOW,
+    MEDIUM,
+    HIGH
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Level myVar = Level.MEDIUM;
+        System.out.println(myVar);
+    }
+}
+```
+
+
+---
+
+
+#####  Loop through the enum values with the values() method
+enum Level {
+    LOW,
+    MEDIUM,
+    HIGH
+}
+
+public class Main {
+    public static void main(String[] args) {
+        for (Level myVar : Level.values()) {
+            System.out.println(myVar);
+        }
+    }
+}
+```
+
+---
+
+##### Get the Enum value o
+```java
+enum Level {
+    LOW,
+    MEDIUM,
+    HIGH
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Level myVar = Level.valueOf("HIGH");
+        System.out.println(myVar);
+    }
+}
+```
 
 ##### Interface
 An interface is a completely "abstract class" that is used to group related methods with empty bodies:
@@ -2260,3 +2689,379 @@ public class TestAPI {
 
 ---
 
+
+
+##### Scanner Class in Java
+
+Scanner class is used to get the input of the primitive types like int, double, etc. and strings. It is found in java.util package.
+```java
+import java.util.Scanner;
+
+public class TestScanner {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter your rollno");
+        int rollno = sc.nextInt();
+        System.out.println("Enter your name");
+        String name = sc.next();
+        System.out.println("Enter your fee");
+        double fee = sc.nextDouble();
+        System.out.println("Rollno:" + rollno + " name:" + name + " fee:" + fee);
+        sc.close();
+    }
+}
+```
+
+##### System Class in Java
+
+System class is used to get the input of the primitive types like int, double, etc. and strings. It is found in java.lang package.
+```java
+import java.util.Scanner;
+
+public class TestSystem {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter your rollno");
+        int rollno = sc.nextInt();
+        System.out.println("Enter your name");
+        String name = sc.next();
+        System.out.println("Enter your fee");
+        double fee = sc.nextDouble();
+        System.out.println("Rollno:" + rollno + " name:" + name + " fee:" + fee);
+        sc.close();
+    }
+}
+```
+
+
+---
+
+####  Regex in Java
+
+Regex is used to match the pattern of the string. It is found in java.util.regex package.
+```java
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+public class TestRegex {
+    public static void main(String[] args) {
+        Pattern p = Pattern.compile(".s");
+        Matcher m = p.matcher("as");
+        boolean b = m.matches();
+        System.out.println(b);
+        boolean b2 = Pattern.compile(".s").matcher("as").matches();
+        System.out.println(b2);
+        boolean b3 = Pattern.matches(".s", "as");
+        System.out.println(b3);
+    }
+}
+```
+
+Example 2:
+```java
+public class Main {
+
+        public static void main(String... args) {
+        // regex to match a valid email address
+        String regex = "^[a-zA-Z0-9_+&*-]+(?:\\."+
+                       "[a-zA-Z0-9_+&*-]+)*@" +
+                       "(?:[a-zA-Z0-9-]+\\.)+[a-z" +
+                       "A-Z]{2,7}$";
+
+        // input email address
+        String email = "ab@gmail.cm";
+
+        // check if email address is valid
+        boolean result = email.matches(regex);
+
+        if(result)
+            System.out.println(email + " is a valid email address");
+        else
+            System.out.println(email + " is not a valid email address");
+        }
+}
+```
+
+---
+
+
+##### Method reference 
+
+Method reference is used to refer method of functional interface. It is compact and easy form of lambda expression. Each time when you are using lambda expression to just referring a method, you can replace your lambda expression with method reference.
+```java
+
+import java.util.*;
+
+public class TestMethodReference {
+    public static void main(String[] args) {
+        List<String> list = new ArrayList<String>();
+        list.add("ankit");
+        list.add("mayank");
+        list.add("irfan");
+        list.add("jai");
+        list.forEach(System.out::println);
+    }
+}
+```
+
+---
+
+
+##### Lambda expression
+
+Lambda expression provides implementation of functional interface. It saves a lot of code. In case of lambda expression, we don't need to define the method again for providing the implementation. Here, we just write the implementation code.
+```java
+import java.util.*;
+
+public class TestLambdaExpression {
+    public static void main(String[] args) {
+        List<String> list = new ArrayList<String>();
+        list.add("ankit");
+        list.add("mayank");
+        list.add("irfan");
+        list.add("jai");
+        list.forEach(
+                (n) -> System.out.println(n)
+        );
+    }
+}
+```
+
+---
+
+##### Java 8 Stream API
+
+Stream API is used to process collections of objects. It provides a clear and concise way to implement lambda expressions to iterate, filter and extract data from a collection.
+```java
+import java.util.*;
+import java.util.stream.Collectors;
+
+public class TestStreamAPI {
+    public static void main(String[] args) {
+        List<String> list = new ArrayList<String>();
+        list.add("ankit");
+        list.add("mayank");
+        list.add("irfan");
+        list.add("jai");
+        List<String> result = list.stream().filter(s -> s.startsWith("a")).collect(Collectors.toList());
+        System.out.println(result);
+    }
+}
+```
+
+---
+
+##### Java 8 Date Time API
+
+Java 8 Date Time API is introduced to deal with date and time. It is found in java.time package.
+```java
+import java.time.LocalDate;
+import java.time.LocalTime;
+import java.time.LocalDateTime;
+import java.time.Month;
+
+public class TestDateTimeAPI {
+    public static void main(String[] args) {
+        LocalDate date = LocalDate.now();
+        System.out.println(date);
+        LocalDate date1 = LocalDate.of(2017, Month.JANUARY, 1);
+        System.out.println(date1);
+        LocalTime time = LocalTime.now();
+        System.out.println(time);
+        LocalTime time1 = LocalTime.of(12, 20, 25, 40);
+        System.out.println(time1);
+        LocalDateTime dt = LocalDateTime.now();
+        System.out.println(dt);
+        LocalDateTime dt1 = LocalDateTime.of(2017, Month.JANUARY, 1, 10, 10, 30);
+        System.out.println(dt1);
+    }
+}
+```
+
+---
+
+##### Java 8 Optional Class
+
+Optional class is a public final class and used to deal with NullPointerException in Java application. It is a container object which may or may not contain a non-null value. If a value is present, isPresent() will return true and get() will return the value.
+```java
+import java.util.Optional;
+
+public class TestOptionalClass {
+    public static void main(String[] args) {
+        String[] str = new String[10];
+        Optional<String> checkNull = Optional.ofNullable(str[5]);
+        if (checkNull.isPresent()) {
+            String lowercaseString = str[5].toLowerCase();
+            System.out.print(lowercaseString);
+        } else
+            System.out.println("string value is not present");
+    }
+}
+```
+
+---
+
+##### Java 8 Default and Static Methods in Interfaces
+
+Java 8 allows us to add non-abstract methods with implementation in interfaces. These methods are known as default methods. We can also declare and define static methods in interfaces.
+```java
+
+interface Vehicle {
+    default void print() {
+        System.out.println("I am a vehicle!");
+    }
+
+    static void blowHorn() {
+        System.out.println("Blowing horn!!!");
+    }
+}
+
+interface FourWheeler {
+    default void print() {
+        System.out.println("I am a four wheeler!");
+    }
+}
+
+public class TestInterface1 implements Vehicle, FourWheeler {
+    public void print() {
+        Vehicle.super.print();
+        FourWheeler.super.print();
+        Vehicle.blowHorn();
+        System.out.println("I am a car!");
+    }
+
+    public static void main(String args[]) {
+        TestInterface1 obj = new TestInterface1();
+        obj.print();
+    }
+}
+```
+
+---
+
+##### Creating files in Java 
+
+Java provides a File class to create, delete, rename and write to files. We can also get the properties of a file using this class.
+```java
+import java.io.File;
+import java.io.IOException;
+
+public class TestFile {
+    public static void main(String[] args) {
+        try {
+            File file = new File("test.txt");
+            if (file.createNewFile()) {
+                System.out.println("New File is created!");
+            } else {
+                System.out.println("File already exists.");
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+}
+```
+
+---
+
+##### Reading files in Java
+
+Java provides a File class to create, delete, rename and write to files. We can also get the properties of a file using this class.
+```java
+import java.io.File;
+import java.io.IOException;
+import java.util.Scanner;
+
+public class TestFile {
+    public static void main(String[] args) {
+        try {
+            File file = new File("test.txt");
+            Scanner sc = new Scanner(file);
+            while (sc.hasNextLine())
+                System.out.println(sc.nextLine());
+            sc.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+}
+```
+
+---
+
+##### Writing files in Java
+
+Java provides a File class to create, delete, rename and write to files. We can also get the properties of a file using this class.
+```java
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+
+public class TestFile {
+    public static void main(String[] args) {
+        try {
+            File file = new File("test.txt");
+            FileWriter writer = new FileWriter(file);
+            writer.write("Hello World");
+            writer.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+}
+```
+
+---
+
+##### Java 8 Concurrency API
+
+Java 8 Concurrency API is introduced to deal with concurrency in Java. It provides a simpler and easier way to deal with concurrency. It provides the following features:
+- Improved performance
+- Better scalability
+- Better maintainability
+- Better testability
+- Better readability
+- Better support for functional programming
+- Better support for parallelism
+- Better support for reactive programming
+- Better support for asynchronous programming
+- Better support for non-blocking programming
+
+```java
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+
+public class TestConcurrencyAPI {
+    public static void main(String[] args) {
+        ExecutorService executor = Executors.newSingleThreadExecutor();
+        executor.submit(() -> {
+            String threadName = Thread.currentThread().getName();
+            System.out.println("Hello " + threadName);
+        });
+    }
+}
+```
+
+---
+
+
+
+---
+
+
+##### Package 
+
+A package in Java is used to group related classes. Think of it as a folder in a file directory. We use packages to avoid name conflicts, and to write a better maintainable code. In order to define a package, we use the package keyword at the top of the source file. Package name should be written in all lowercase letters. If we do not specify any package, the classes are placed in the default package. The package statement must be the first statement in the source file. There can be only one package statement in a file, and package declaration should be present in all the source files of the package.
+
+```java
+
+package com.javatpoint;
+
+public class TestPackage {
+    public static void main(String[] args) {
+        System.out.println("Hello Package");
+    }
+}
+```
+
+---
