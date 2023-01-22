@@ -1,5 +1,7 @@
 #### Java
+
 #### How to install Java
+
     - Install Java on Windows
         - Download Java from Oracle website (https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
         - Install Java on Windows 10 (https://www3.ntu.edu.sg/home/ehchua/programming/howto/JDK_Howto.html)
@@ -16,6 +18,7 @@
 ---
 
 #### Check if Java is installed
+
     - Check Java version
         - Check Java version on Windows
             - java -version
@@ -27,6 +30,7 @@
 ---
 
 #### How to set Java path
+
     - Set Java path on Windows
         - setx JAVA_HOME "C:\Program Files\Java\jdk1.8.0_131"
     - Set Java path on Linux
@@ -37,6 +41,7 @@
 ---
 
 #### Write a Java program
+
 ```java
     // Test.java
     public class Test {  // class name must be same as file name
@@ -49,26 +54,28 @@
 ---
 
 #### How to compile Java program
+
         - javac Test.java
+
 #### How to run Java program
+
         - java Test
 
 ---
 
-
-
 #### Variables
-  - Primitive data types (int, float, double, char, boolean, byte, short, long)
-    > int a = 10;
-    > float b = 10.5f;
-    > double c = 10.5;
-    > char d = 'a';
-    > boolean e = true;
-    > byte f = 10;
-    > short g = 10;
-    > long h = 10;
-    
+
+- Primitive data types (int, float, double, char, boolean, byte, short, long)
+  > int a = 10;
+  > float b = 10.5f;
+  > double c = 10.5;
+  > char d = 'a';
+  > boolean e = true;
+  > byte f = 10;
+  > short g = 10;
+  > long h = 10;
 - Reference data types (String, Array, Class, Interface)
+
 ```java
     // examples of reference data types
     String a = "Hello World";
@@ -85,8 +92,8 @@
 
 ---
 
-
 ##### Type casting
+
 ```java
     // type casting
     int a = 10;
@@ -97,6 +104,7 @@
 ---
 
 ##### Type promotion
+
 ```java
     // type promotion
     byte a = 10;
@@ -110,6 +118,7 @@
 ---
 
 ##### Type conversion
+
 ```java
     // type conversion
     int a = 10;
@@ -120,6 +129,7 @@
 ---
 
 ##### String concatenation
+
 ```java
     // string concatenation
     String a = "Hello";
@@ -130,6 +140,7 @@
 ---
 
 ##### String comparison
+
 ```java
     // string comparison
     String a = "Hello";
@@ -139,8 +150,8 @@
 
 ---
 
-
 ##### String format
+
 ```java
     // string format
     String a = String.format("Hello %s", "World");
@@ -161,6 +172,29 @@ public class Main {
 
 ```
 
+---
+
+##### String methods
+
+````java
+    // string methods
+    String a = "Hello World";
+    int b = a.length();
+    String c = a.toUpperCase();
+    String d = a.toLowerCase();
+    String e = a.trim();
+    String f = a.substring(0, 5);
+    String g = a.replace("Hello", "Hi");
+    String h = a.concat("!");
+    String i = a.charAt(0);
+    String j = a.indexOf("World");
+    String k = a.lastIndexOf("World");
+    String l = a.startsWith("Hello");
+    String m = a.endsWith("World");
+    String n = a.contains("World");
+    String o = a.split(" ");
+```
+
 
 ---
 
@@ -171,7 +205,7 @@ public class Main {
     String b = "Hello";
     System.out.println(a instanceof Integer);
     System.out.println(b instanceof String);
-```
+````
 
 ```java
    Double result = Math.random() * 100;
@@ -184,10 +218,10 @@ public class Main {
 
 ---
 
-
-
 #### Operators
-##### Arithmetic operators ( +, -, *, /, %, ++, -- )
+
+##### Arithmetic operators ( +, -, \*, /, %, ++, -- )
+
 ```java
     int a = 10;
     int b = 20;
@@ -205,6 +239,7 @@ public class Main {
 ---
 
 ##### Unary operators ( +, -, ++, --, !, ~ )
+
 ```java
  int a = 10;
  int b = -a;
@@ -218,6 +253,7 @@ public class Main {
 ---
 
 ##### Relational operators ( ==, !=, >, <, >=, <= )
+
 ```java
     int a = 10;
     int b = 20;
@@ -231,8 +267,8 @@ public class Main {
 
 ---
 
-
 #### Logical operators ( &&, ||, ! )
+
 ```java
     int a = 10;
     int b = 20;
@@ -244,6 +280,7 @@ public class Main {
 ---
 
 ##### Bitwise operators ( &, |, ^, ~, <<, >>, >>> )
+
 ```java
     int a = 10;
     int b = 20;
@@ -258,7 +295,8 @@ public class Main {
 
 ---
 
-##### Assignment operators ( =, +=, -=, *=, /=, %=, &=, |=, ^=, >>=, <<=, >>>= )
+##### Assignment operators ( =, +=, -=, \*=, /=, %=, &=, |=, ^=, >>=, <<=, >>>= )
+
 ```java
     int a = 10;
     int b = 20;
@@ -278,6 +316,7 @@ public class Main {
 ---
 
 ##### Ternary operators ( ?: )
+
 ```java
     int a = 10;
     int b = 20;
@@ -287,6 +326,7 @@ public class Main {
 ---
 
 #####s Misc operators ( instanceof, -> )
+
 ```java
     int a = 10;
     boolean b = a instanceof Integer;
@@ -294,9 +334,10 @@ public class Main {
 
 ---
 
-
 ##### Data Types
+
 - Primitive data types (int, float, double, char, boolean, byte, short, long)
+
 ```java
         int a = 10;
         float b = 10.5f;
@@ -309,6 +350,7 @@ public class Main {
 ```
 
 - Reference data types (String, Array, Class, Interface)
+
 ```java
         // examples of reference data types
         LocalDate date = LocalDate.now();
@@ -327,9 +369,10 @@ public class Main {
 
 ---
 
-
 ##### Dates
+
 - LocalDate, LocalTime, LocalDateTime
+
 ```java
         LocalDate date = LocalDate.now();
         LocalTime time = LocalTime.now();
@@ -346,22 +389,25 @@ public class Main {
 ---
 
 #### public vs private
+
 - public
-    - accessible from anywhere
+  - accessible from anywhere
 - private
-    - accessible only within the class
+  - accessible only within the class
 
 ---
 
 #### static vs non-static
+
 - static
-    - belongs to the class
-    - can be accessed without creating an object
+  - belongs to the class
+  - can be accessed without creating an object
 - non-static
-    - belongs to the object
-    - can be accessed only after creating an object
+  - belongs to the object
+  - can be accessed only after creating an object
 
 Example:
+
 ```java
 class Test {
     public static void main(String[] args) {
@@ -383,13 +429,15 @@ class Test {
 ---
 
 #### Public vs Static
+
 - public
-    - accessible from anywhere
+  - accessible from anywhere
 - static
-    - belongs to the class
-    - can be accessed without creating an object
+  - belongs to the class
+  - can be accessed without creating an object
 
 Example:
+
 ```java
 class Test {
     public static void main(String[] args) {
@@ -411,7 +459,9 @@ class Test {
 ---
 
 #### Java.lang package
+
 Note: All the classes in java.lang package are imported by default. So, we don't need to import them explicitly.
+
 ```java
 class Lang{
     public static void main(String[] args) {
@@ -444,10 +494,12 @@ class Lang{
 
 ```
 
-
 ---
+
 ##### Loops
+
 - For loop, While loop, Do-While loop, Enhanced for loop (for-each loop)
+
 ```java
         // for loop
         for (int i = 0; i < 10; i++) {
@@ -475,7 +527,9 @@ class Lang{
 ---
 
 ##### Break and Continue
+
 - Break
+
 ```java
         for (int i = 0; i < 10; i++) {
             if (i == 5) {
@@ -486,6 +540,7 @@ class Lang{
 ```
 
 - Continue
+
 ```java
         for (int i = 0; i < 10; i++) {
             if (i == 5) {
@@ -523,8 +578,8 @@ class Lang{
         }
 ```
 
-
 ##### Loops and String
+
 ```java
         String str = "Hello World";
         // for loop
@@ -549,8 +604,8 @@ class Lang{
         }
 ```
 
-
 ##### Loops using Array streams
+
 ```java
 import java.util.Arrays;
 
@@ -565,12 +620,12 @@ public class Main {
 }
 ```
 
-
-
 ---
 
 ##### Decrements and Increments
+
 - Pre-increment, Post-increment, Pre-decrement, Post-decrement
+
 ```java
         int a = 10;
         // pre-increment - the value of a is incremented before the assignment
@@ -586,7 +641,9 @@ public class Main {
 ---
 
 ##### Conditional Statements
+
 - If, If-else, If-else-if, Switch
+
 ```java
         // if
         if (a > 10) {
@@ -621,29 +678,32 @@ public class Main {
                 System.out.println("a is not equal to 1, 2 or 3");
         }
 ```
+
 ---
 
 ##### Keywords
 
 - Access Modifiers (public, private, protected, default)
-> The reason for access modifiers is security. It helps us or users no to access variables that you are not suppose to access. For example, if you have a variable that is private, you can only access it within the class. If you have a variable that is public, you can access it anywhere in your program.
+  > The reason for access modifiers is security. It helps us or users no to access variables that you are not suppose to access. For example, if you have a variable that is private, you can only access it within the class. If you have a variable that is public, you can access it anywhere in your program.
 
 Types of access modifier (Privilege or permission level)
-1) Public
-2) Private
-3) No modifier (default)
-4) Protected
 
-Access modifier | Class | Package | Subclass | World
---- | --- | --- | --- | ---
-public | Y | Y | Y | Y
-protected | Y | Y | Y | N
-no modifier | Y | Y | N | N
-private | Y | N | N | N
+1. Public
+2. Private
+3. No modifier (default)
+4. Protected
+
+| Access modifier | Class | Package | Subclass | World |
+| --------------- | ----- | ------- | -------- | ----- |
+| public          | Y     | Y       | Y        | Y     |
+| protected       | Y     | Y       | Y        | N     |
+| no modifier     | Y     | Y       | N        | N     |
+| private         | Y     | N       | N        | N     |
 
 ---
 
 ##### Arrays
+
 Arrays are used to store multiple values in a single variable, instead of declaring separate variables for each value.
 
 ```java
@@ -665,26 +725,34 @@ Arrays are used to store multiple values in a single variable, instead of declar
         }
 ```
 
---- 
+---
 
 ##### Ways of creating an array
-1) Declaring an array
+
+1. Declaring an array
+
 ```java
         int[] a = new int[5];
 ```
-2) Initializing an array
+
+2. Initializing an array
+
 ```java
         int[] a = {1, 2, 3, 4, 5};
 ```
-3) Declaring and initializing an array
+
+3. Declaring and initializing an array
+
 ```java
         int[] a = new int[]{1, 2, 3, 4, 5};
 ```
 
 ---
 
-#### Arrays.toString() 
+#### Arrays.toString()
+
 This method is used to print the array in a readable format.
+
 ```java
 import java.util.Arrays;
 public class Simple {
@@ -696,119 +764,161 @@ public class Simple {
 
 ```
 
-
-
 ---
 
 ##### Array Methods
+
 - length
+
 ```java
         int[] a = {1, 2, 3, 4, 5};
         System.out.println(a.length);
 ```
+
 - clone
+
 ```java
         int[] a = {1, 2, 3, 4, 5};
         int[] b = a.clone();
 ```
+
 - equals
+
 ```java
         int[] a = {1, 2, 3, 4, 5};
         int[] b = {1, 2, 3, 4, 5};
         System.out.println(a.equals(b));
 ```
+
 - fill
+
 ```java
         int[] a = new int[5];
         Arrays.fill(a, 10);
 ```
+
 - sort
+
 ```java
         int[] a = {5, 4, 3, 2, 1};
         Arrays.sort(a);
 ```
+
 - toString
+
 ```java
         int[] a = {1, 2, 3, 4, 5};
         System.out.println(Arrays.toString(a));
 ```
+
 - binarySearch
+
 ```java
         int[] a = {1, 2, 3, 4, 5};
         System.out.println(Arrays.binarySearch(a, 3));
 ```
+
 - copyOf
+
 ```java
         int[] a = {1, 2, 3, 4, 5};
         int[] b = Arrays.copyOf(a, 3);
 ```
+
 - copyOfRange
+
 ```java
         int[] a = {1, 2, 3, 4, 5};
         int[] b = Arrays.copyOfRange(a, 1, 3);
 ```
+
 - deepEquals
+
 ```java
         int[][] a = {{1, 2}, {3, 4}};
         int[][] b = {{1, 2}, {3, 4}};
         System.out.println(Arrays.deepEquals(a, b));
 ```
+
 - deepHashCode
+
 ```java
         int[][] a = {{1, 2}, {3, 4}};
         System.out.println(Arrays.deepHashCode(a));
 ```
+
 - deepToString
+
 ```java
         int[][] a = {{1, 2}, {3, 4}};
         System.out.println(Arrays.deepToString(a));
 ```
+
 - hashCode
+
 ```java
         int[] a = {1, 2, 3, 4, 5};
         System.out.println(Arrays.hashCode(a));
 ```
+
 - parallelPrefix
+
 ```java
         int[] a = {1, 2, 3, 4, 5};
         Arrays.parallelPrefix(a, (x, y) -> x * y);
 ```
+
 - parallelSetAll
+
 ```java
         int[] a = new int[5];
         Arrays.parallelSetAll(a, i -> i * 10);
 ```
+
 - parallelSort
+
 ```java
         int[] a = {5, 4, 3, 2, 1};
         Arrays.parallelSort(a);
 ```
+
 - setAll
+
 ```java
         int[] a = new int[5];
         Arrays.setAll(a, i -> i * 10);
 ```
+
 - spliterator
+
 ```java
         int[] a = {1, 2, 3, 4, 5};
         Spliterator.OfInt s = Arrays.spliterator(a);
 ```
+
 - stream
+
 ```java
         int[] a = {1, 2, 3, 4, 5};
         IntStream s = Arrays.stream(a);
 ```
+
 - asList
+
 ```java
         int[] a = {1, 2, 3, 4, 5};
         List<Integer> l = Arrays.asList(a);
 ```
+
 - deepHashCode
+
 ```java
         int[][] a = {{1, 2}, {3, 4}};
         System.out.println(Arrays.deepHashCode(a));
 ```
+
 - deepToString
+
 ```java
         int[][] a = {{1, 2}, {3, 4}};
         System.out.println(Arrays.deepToString(a));
@@ -816,8 +926,8 @@ public class Simple {
 
 ---
 
+##### Arrays and indexes
 
-##### Arrays and indexes 
 ```java
         int[] a = {1, 2, 3, 4, 5};
         System.out.println(a[0]);
@@ -831,8 +941,8 @@ public class Simple {
 
 ---
 
-
 ##### Mixed Data Types
+
 ```java
         Object[] a = {1, "Hello", 2.5};
 ```
@@ -840,6 +950,7 @@ public class Simple {
 ---
 
 ##### Multidimensional Arrays
+
 ```java
         int[][] a = {{1, 2}, {3, 4}};
 ```
@@ -847,6 +958,7 @@ public class Simple {
 ---
 
 ##### Jagged Arrays
+
 ```java
         int[][] a = {{1, 2}, {3, 4, 5}};
 ```
@@ -854,6 +966,7 @@ public class Simple {
 ---
 
 ##### Classes and Objects
+
 Classes are the basics of object-oriented programming. A class is a user-defined blueprint or prototype from which objects are created. It represents the set of properties or methods that are common to all objects of one type.
 
 ```java
@@ -913,11 +1026,10 @@ public class Simple {
 
 ---
 
-
-
 ##### Methods
-Methods are a block of code that perform a specific task. Methods are used to perform certain actions, and they are also known as functions. 
-    
+
+Methods are a block of code that perform a specific task. Methods are used to perform certain actions, and they are also known as functions.
+
 ```java
 public class Simple {
     public static void main(String... args) {
@@ -934,6 +1046,7 @@ public class Simple {
 ---
 
 ##### Constructors
+
 Constructors are used to initialize the object. It is called when an object of a class is created. It can be used to set initial values for object attributes.
 
 ```java
@@ -947,7 +1060,7 @@ public class Student {
         this.name = name;
     }
 
-    
+
     public void display() {
         System.out.println(id + " " + name);
     }
@@ -962,8 +1075,8 @@ public class Student {
 
 ---
 
-
 ##### Class
+
 A class is a user-defined blueprint or prototype from which objects are created. It represents the set of properties or methods that are common to all objects of one type.
 
 ```java
@@ -991,6 +1104,7 @@ public class Student { // class declaration
 ---
 
 ##### Math Class
+
 The java.lang.Math class is a part of the Java API. It provides us with a large number of methods that perform mathematical operations on primitive data types. The methods of the Math class are static, so we can call them without creating an object of the Math class.
 
 ```java
@@ -1010,6 +1124,7 @@ public class MathClass {
 ---
 
 ##### Object
+
 An object is a basic unit of Object Oriented Programming and represents the real-life entities. A typical java program creates many objects, which as you know, interact by invoking methods.
 
 ```java
@@ -1035,6 +1150,7 @@ public class Student {
 ---
 
 ##### Getters and Setters
+
 Getters and setters are methods that provide access to the object’s properties. Getters return the value of the property, and setters set the value of the property.
 
 ```java
@@ -1060,10 +1176,10 @@ public class Student {
 }
 ```
 
-
 ---
 
 ##### toString() Method
+
 The toString() method returns the string representation of the object. If you print any object, java compiler internally invokes the toString() method on the object. So, overriding the toString() method, returns the desired output, it can be the state of an object etc. depending on your implementation.
 
 ```java
@@ -1086,13 +1202,10 @@ public class Student {
 }
 ```
 
-
-
-
-
 ---
 
 ##### Inheritance
+
 Inheritance is a mechanism in which one object acquires all the properties and behaviors of a parent object. It is an important part of OOPs (Object Oriented programming system). It is used to achieve runtime polymorphism.
 
 ```java
@@ -1129,6 +1242,7 @@ public class Main {
 ---
 
 ##### Method
+
 A method is a block of code which only runs when it is called. You can pass data, known as parameters, into a method. Methods are used to perform certain actions, and they are also known as functions. In this chapter, we will learn how to create methods with or without parameters, and how to call a method.
 
 ```java
@@ -1145,6 +1259,7 @@ public class Simple {
 ---
 
 #### Method overloading
+
 Method overloading is a feature that allows a class to have more than one method having the same name, if their argument lists are different. It is similar to constructor overloading in Java, that allows a class to have more than one constructor having different argument lists.
 
 ```java
@@ -1166,12 +1281,10 @@ public class MethodOverloading {
 }
 ```
 
-
-
 ---
 
-
 ##### Wrapper Class
+
 Wrapper classes are used to convert primitive data types into objects. The primitive data types are boolean, char, byte, short, int, long, float, and double. All the wrapper classes are immutable (unchangeable).
 
 ```java
@@ -1193,8 +1306,8 @@ public class WrapperClass {
 
 ---
 
-
 ##### Inheritance
+
 Inheritance is a mechanism in which one object acquires all the properties and behaviors of a parent object. It is an important part of OOPs (Object Oriented programming system). It is used to achieve runtime polymorphism.
 
 ```java
@@ -1230,8 +1343,8 @@ public class Main {
 
 ---
 
-
 ##### Polymorphism
+
 Polymorphism means "many forms", and it occurs when we have many classes that are related to each other by inheritance.
 
 ```java
@@ -1270,6 +1383,7 @@ public class Main {
 ---
 
 ##### Abstraction
+
 Abstraction is a process of hiding the implementation details and showing only functionality to the user. There are two ways to achieve abstraction in java
 
 - Abstract class (0 to 100%)
@@ -1302,8 +1416,8 @@ public class TestAbstraction1 {
 
 ---
 
-
 ##### Encapsulation
+
 Encapsulation is defined as the wrapping up of data under a single unit. It is the mechanism that binds together code and the data it manipulates.
 
 ```java
@@ -1364,8 +1478,8 @@ public class TestEncapsulation {
 
 ---
 
+##### Enum
 
-#####  Enum
 Enum is a special "class" that represents a group of constants (unchangeable variables, like final variables).
 
 ```java
@@ -1383,25 +1497,25 @@ public class Main {
 }
 ```
 
-
 ---
 
+##### Loop through the enum values with the values() method
 
-#####  Loop through the enum values with the values() method
 enum Level {
-    LOW,
-    MEDIUM,
-    HIGH
+LOW,
+MEDIUM,
+HIGH
 }
 
 public class Main {
-    public static void main(String[] args) {
-        for (Level myVar : Level.values()) {
-            System.out.println(myVar);
-        }
-    }
+public static void main(String[] args) {
+for (Level myVar : Level.values()) {
+System.out.println(myVar);
 }
-```
+}
+}
+
+````
 
 ---
 
@@ -1419,9 +1533,10 @@ public class Main {
         System.out.println(myVar);
     }
 }
-```
+````
 
 ##### Interface
+
 An interface is a completely "abstract class" that is used to group related methods with empty bodies:
 
 ```java
@@ -1452,8 +1567,8 @@ class MyMainClass {
 
 ---
 
-
 ##### Exception
+
 An exception is an event, which occurs during the execution of a program, that disrupts the normal flow of the program's instructions.
 
 ```java
@@ -1472,13 +1587,13 @@ public class TestException {
 
 ---
 
-
 ##### Collection
+
 A collection is a group of individual objects represented as a single unit. Java provides a framework that enables us to manipulate a group of objects as a single unit.
 Examples of Collection Framework are:ArrayList, List, Set, Queue, Deque, Map, LinkedList, HashSet, TreeSet, PriorityQueue, ArrayDeque, HashMap, TreeMap, LinkedHashMap, etc.
 
-
 ArrayList is a collection class which implements List interface. It is used to create a dynamic array. It is like an array, but there is no size limit. We can add or remove elements anytime.
+
 ```java
 import java.util.*;
 public class TestCollection {
@@ -1498,6 +1613,7 @@ public class TestCollection {
 ```
 
 List is an ordered collection (also known as a sequence). The user of this interface has precise control over where in the list each element is inserted. The user can access elements by their integer index (position in the list), and search for elements in the list.
+
 ```java
 import java.util.*;
 public class TestCollection2 {
@@ -1517,6 +1633,7 @@ public class TestCollection2 {
 ```
 
 Set is a collection that cannot contain duplicate elements. Set interface models the mathematical set abstraction. The Set interface places additional stipulations, beyond those inherited from the Collection interface, on the contracts of all constructors and on the contracts of the add, equals and hashCode methods. Declarations for other inherited methods are also included here for convenience. (The specifications accompanying these declarations have been tailored to the Set interface, but they do not contain any additional stipulations.)
+
 ```java
 import java.util.*;
 public class TestCollection3 {
@@ -1536,6 +1653,7 @@ public class TestCollection3 {
 ```
 
 Queue is an ordered collection (also known as a sequence). The user of this interface has precise control over where in the list each element is inserted. The user can access elements by their integer index (position in the list), and search for elements in the list.
+
 ```java
 import java.util.*;
 public class TestCollection4 {
@@ -1564,6 +1682,7 @@ public class TestCollection4 {
 ```
 
 Deque is a linear collection that supports element insertion and removal at both ends. The name deque is short for "double ended queue" and is usually pronounced "deck". Most Deque implementations place no fixed limits on the number of elements they may contain, but this interface supports capacity-restricted deques as well as those with no fixed size limit.
+
 ```java
 import java.util.*;
 public class TestCollection5 {
@@ -1581,6 +1700,7 @@ public class TestCollection5 {
 ```
 
 Map is an object that maps keys to values. A map cannot contain duplicate keys; each key can map to at most one value.
+
 ```java
 import java.util.*;
 public class TestCollection6 {
@@ -1598,6 +1718,7 @@ public class TestCollection6 {
 ```
 
 LinkedList is a linear collection that supports element insertion and removal at both ends. The name deque is short for "double ended queue" and is usually pronounced "deck". Most Deque implementations place no fixed limits on the number of elements they may contain, but this interface supports capacity-restricted deques as well as those with no fixed size limit.
+
 ```java
 import java.util.*;
 public class TestCollection7 {
@@ -1615,6 +1736,7 @@ public class TestCollection7 {
 ```
 
 Vector is a legacy class that is similar to ArrayList. It is almost identical to ArrayList, except that it is synchronized. If a thread-safe implementation is not needed, it is recommended to use ArrayList in place of Vector.
+
 ```java
 import java.util.*;
 public class TestCollection8 {
@@ -1633,6 +1755,7 @@ public class TestCollection8 {
 ```
 
 Stack is a legacy class that is similar to the Vector class. It implements a last-in-first-out (LIFO) stack of objects. It extends class Vector with five operations that allow a vector to be treated as a stack. The usual push and pop operations are provided, as well as a method to peek at the top item on the stack, a method to test for whether the stack is empty, and a method to search the stack for an item and discover how far it is from the top.
+
 ```java
 import java.util.*;
 public class TestCollection9 {
@@ -1653,6 +1776,7 @@ public class TestCollection9 {
 ```
 
 Hashtable is an implementation of a hash table, which maps keys to values. Any non-null object can be used as a key or as a value. To successfully store and retrieve objects from a hashtable, the objects used as keys must implement the hashCode method and the equals method.
+
 ```java
 import java.util.*;
 public class TestCollection10 {
@@ -1670,6 +1794,7 @@ public class TestCollection10 {
 ```
 
 Properties is a Hashtable subclass representing a persistent set of properties. The Properties can be saved to a stream or loaded from a stream. Each key and its corresponding value in the property list is a string.
+
 ```java
 import java.io.*;
 import java.util.*;
@@ -1689,6 +1814,7 @@ public class TestCollection11 {
 ```
 
 HashMap is a part of Java Collections Framework. It is used to store items in key/value pairs. It is like an array, but you can access items using keys. It is denoted as HashMap<Key, Value>. The keys and values can be of any type.
+
 ```java
 import java.util.*;
 public class TestCollection12 {
@@ -1706,6 +1832,7 @@ public class TestCollection12 {
 ```
 
 TreeMap is a part of Java Collections Framework. It is used to store items in key/value pairs. It is like an array, but you can access items using keys. It is denoted as TreeMap<Key, Value>. The keys and values can be of any type.
+
 ```java
 import java.util.*;
 public class TestCollection13 {
@@ -1723,6 +1850,7 @@ public class TestCollection13 {
 ```
 
 HashSet is a part of Java Collections Framework. It is used to store the elements by using a mechanism called hashing. HashSet contains unique elements only. It stores the elements by using a mechanism called hashing. HashSet contains unique elements only.
+
 ```java
 import java.util.*;
 public class TestCollection14 {
@@ -1742,6 +1870,7 @@ public class TestCollection14 {
 ```
 
 LinkedHashSet is a part of Java Collections Framework. It is used to store the elements by using a mechanism called hashing. LinkedHashSet contains unique elements only. It extends the HashSet class and implements the Set interface. It inherits all methods from HashSet class and uses a doubly linked list to store the elements.
+
 ```java
 import java.util.*;
 public class TestCollection15 {
@@ -1761,6 +1890,7 @@ public class TestCollection15 {
 ```
 
 TreeSet is a part of Java Collections Framework. It is used to store the elements by using a mechanism called hashing. TreeSet contains unique elements only. It implements the Set interface that uses a tree for storage. It inherits AbstractSet class and implements NavigableSet interface. The objects of TreeSet stored in ascending order.
+
 ```java
 import java.util.*;
 public class TestCollection16 {
@@ -1780,11 +1910,11 @@ public class TestCollection16 {
 
 ---
 
-
-
 ##### Generics
+
 The Java Generics is a new feature that was added to the Java programming language in JDK 5. It is a way to achieve strong type checking at compile time. It allows us to parameterize types, the way classes parameterize their members. It is also known as parameterized types, and it provides compile-time type safety that allows programmers to catch invalid types at compile time.
 Examples are: ArrayList, LinkedList, HashSet, TreeSet, HashMap, TreeMap, etc.
+
 ```java
 import java.util.*;
 public class TestCollection17 {
@@ -1804,7 +1934,9 @@ public class TestCollection17 {
 ```
 
 ##### Iterator
+
 Iterator is an interface which is used to traverse a collection object. It is present in the java.util package and is used to get the Iterator object. Iterator interface has 3 methods: hasNext(), next(), remove().
+
 ```java
 import java.util.*;
 public class TestCollection18 {
@@ -1823,7 +1955,9 @@ public class TestCollection18 {
 ```
 
 ##### ListIterator
+
 ListIterator is an interface which is used to traverse a collection object in both the directions. It is present in the java.util package and is used to get the ListIterator object. ListIterator interface has 5 methods: hasNext(), next(), hasPrevious(), previous(), remove().
+
 ```java
 import java.util.*;
 public class TestCollection19 {
@@ -1846,7 +1980,9 @@ public class TestCollection19 {
 ```
 
 ##### Enumeration
+
 Enumeration is an interface which is used to traverse a collection object. It is present in the java.util package and is used to get the Enumeration object. Enumeration interface has 2 methods: hasMoreElements(), nextElement().
+
 ```java
 import java.util.*;
 public class TestCollection20 {
@@ -1865,7 +2001,9 @@ public class TestCollection20 {
 ```
 
 ##### Comparable
+
 Comparable is an interface which is used to order the objects of user-defined class. It is present in the java.lang package and contains only one method named compareTo(Object). It provides a single sorting sequence only, i.e., you can sort the elements on the basis of single data member only. It is found in java.lang package.
+
 ```java
 import java.util.*;
 public class TestCollection21 {
@@ -1902,7 +2040,9 @@ class Student implements Comparable<Student> {
 ```
 
 ##### Comparator
+
 Comparator is an interface which is used to order the objects of user-defined class. It is present in the java.util package and contains only one method named compare(Object, Object). It provides multiple sorting sequences, i.e., you can sort the elements on the basis of multiple data members like name, age, rollno, etc. It is found in java.util package.
+
 ```java
 import java.util.*;
 public class TestCollection22 {
@@ -1941,12 +2081,12 @@ class AgeComparator implements Comparator<Student> {
 }
 ```
 
-
-
 ##### Multithreading
+
 Multithreading is a Java feature that allows concurrent execution of two or more parts of a program for maximum utilization of CPU. Each part of such program is called a thread. Thus, threads are light-weight processes within a process.
 
 How to create a thread in Java:
+
 ```java
 class TestMultitasking1 extends Thread {
     public void run() {
@@ -1962,7 +2102,9 @@ class TestMultitasking1 extends Thread {
 ```
 
 ##### Thread class
+
 Thread class is present in java.lang package. It provides constructors and methods to create and perform operations on a thread. It is the direct child of Object class.
+
 ```java
 
 class TestMultitasking2 extends Thread {
@@ -1979,7 +2121,9 @@ class TestMultitasking2 extends Thread {
 ```
 
 ##### Runnable interface
+
 Runnable interface is present in java.lang package. It provides run() method to perform action for a thread. It is the direct child of Object class.
+
 ```java
 class TestMultitasking3 implements Runnable {
     public void run() {
@@ -1994,7 +2138,9 @@ class TestMultitasking3 implements Runnable {
 ```
 
 ##### Thread states
+
 A thread can be in one of the following states:
+
 1. New
 2. Runnable
 3. Running
@@ -2002,13 +2148,14 @@ A thread can be in one of the following states:
 5. Time Waiting
 6. Terminated
 
-
 ---
 
 ##### Serialization
+
 Serialization is a mechanism of writing the state of an object into a byte stream. Deserialization is the reverse process where the byte stream is used to recreate the actual Java object in memory. This mechanism is used to persist the object.
 
 ##### Serialization in Java
+
 ```java
 import java.io.*;
 class Student implements Serializable {
@@ -2032,6 +2179,7 @@ public class TestSerialization1 {
 ```
 
 ##### Deserialization in Java
+
 ```java
 import java.io.*;
 class Student implements Serializable {
@@ -2056,12 +2204,16 @@ public class TestDeserialization1 {
 ---
 
 ##### I/O
+
 I/O stands for Input/Output. It is a mechanism to communicate between two entities. In Java, I/O is divided into two categories:
+
 1. Byte Stream
 2. Character Stream
 
 ##### Byte Stream
+
 Byte stream is used to perform input and output of 8-bit bytes. If you are dealing with image or video, you should go for byte stream. It is used to perform input and output of 8-bit bytes. If you are dealing with image or video, you should go for byte stream. It is found in java.io package.
+
 ```java
 import java.io.*;
 public class TestIO1 {
@@ -2075,7 +2227,9 @@ public class TestIO1 {
 ```
 
 ##### Character Stream
+
 Character stream is used to perform input and output for 16-bit unicode. If you are dealing with text data, you should go for character stream. It is found in java.io package.
+
 ```java
 import java.io.*;
 public class TestIO2 {
@@ -2089,7 +2243,9 @@ public class TestIO2 {
 ```
 
 ##### Buffered Stream
+
 Buffered stream adds additional functionality to the input and output stream. Buffered stream keeps the data in buffer. It reduces the number of I/O operations. It is found in java.io package.
+
 ```java
 import java.io.*;
 
@@ -2109,7 +2265,9 @@ public class TestIO3 {
 ```
 
 ##### Data Stream
+
 Data stream is used for java primitive data types. It is found in java.io package.
+
 ```java
 import java.io.*;
 
@@ -2127,7 +2285,9 @@ public class TestIO4 {
 ```
 
 ##### Sequence Stream
+
 Sequence stream is used to read data from multiple streams. It is found in java.io package.
+
 ```java
 import java.io.*;
 
@@ -2148,7 +2308,9 @@ public class TestIO5 {
 ```
 
 ##### Object Stream
+
 Object stream is used to perform serialization and deserialization of an object. It is found in java.io package.
+
 ```java
 import java.io.*;
 
@@ -2175,7 +2337,9 @@ public class TestIO6 {
 ```
 
 ##### Piped Stream
+
 Piped stream is used to communicate between two threads. It is found in java.io package.
+
 ```java
 import java.io.*;
 
@@ -2223,7 +2387,9 @@ public class TestIO7 {
 ```
 
 ##### File Stream
+
 File stream is used to perform input and output operation for files. It is found in java.io package.
+
 ```java
 import java.io.*;
 
@@ -2240,7 +2406,9 @@ public class TestIO8 {
 ```
 
 ##### String Reader
+
 String reader is used to read data from string. It is found in java.io package.
+
 ```java
 import java.io.*;
 
@@ -2259,7 +2427,9 @@ public class TestIO9 {
 ```
 
 ##### String Writer
+
 String writer is used to write data into string. It is found in java.io package.
+
 ```java
 import java.io.*;
 
@@ -2275,7 +2445,9 @@ public class TestIO10 {
 ```
 
 ##### Pushback Reader
+
 Pushback reader is used to push back the data into stream. It is found in java.io package.
+
 ```java
 import java.io.*;
 
@@ -2300,7 +2472,9 @@ public class TestIO11 {
 ```
 
 ##### Buffered Reader
+
 Buffered reader is used to read data line by line. It is found in java.io package.
+
 ```java
 import java.io.*;
 
@@ -2319,7 +2493,9 @@ public class TestIO12 {
 ```
 
 ##### Buffered Writer
+
 Buffered writer is used to write data line by line. It is found in java.io package.
+
 ```java
 import java.io.*;
 
@@ -2336,7 +2512,9 @@ public class TestIO13 {
 ```
 
 ##### Data Stream
+
 Data stream is used to read and write primitive data types. It is found in java.io package.
+
 ```java
 import java.io.*;
 
@@ -2356,7 +2534,9 @@ public class TestIO14 {
 ---
 
 ##### Error Handling
+
 Error handling is a mechanism to handle the run time errors so that normal flow of the application can be maintained. It is found in java.lang package.
+
 ```java
 import java.lang.*;
 
@@ -2373,7 +2553,9 @@ public class TestError {
 ```
 
 ##### Error
+
 Error is a subclass of Throwable class. It is found in java.lang package.
+
 ```java
 import java.lang.*;
 
@@ -2390,7 +2572,9 @@ public class TestError1 {
 ```
 
 ##### Exception
+
 Exception is a subclass of Throwable class. It is found in java.lang package.
+
 ```java
 import java.lang.*;
 
@@ -2407,7 +2591,9 @@ public class TestError2 {
 ```
 
 ##### Exception Handling
+
 Exception handling is a mechanism to handle the run time errors so that normal flow of the application can be maintained. It is found in java.lang package.
+
 ```java
 import java.lang.*;
 
@@ -2424,7 +2610,9 @@ public class TestError3 {
 ```
 
 ##### Exception Propagation
+
 Exception propagation is a mechanism to propagate the exception to caller method. It is found in java.lang package.
+
 ```java
 import java.lang.*;
 
@@ -2441,7 +2629,9 @@ public class TestError4 {
 ```
 
 ##### Finally Block
+
 Finally block is used to execute important code such as closing connection, stream etc. It is found in java.lang package.
+
 ```java
 import java.lang.*;
 
@@ -2462,6 +2652,7 @@ public class TestError5 {
 ##### Throw
 
 Throw is used to explicitly throw an exception. It is found in java.lang package.
+
 ```java
 import java.lang.*;
 
@@ -2483,6 +2674,7 @@ public class TestError6 {
 ##### Throws
 
 Throws is used to declare an exception. It is found in java.lang package.
+
 ```java
 
 import java.lang.*;
@@ -2509,6 +2701,7 @@ public class TestError7 {
 ##### Try Catch
 
 Try catch is used to handle the checked exceptions. It is found in java.lang package.
+
 ```java
 import java.lang.*;
 
@@ -2527,6 +2720,7 @@ public class TestError8 {
 ##### Try Catch Finally
 
 Try catch finally is used to handle the checked exceptions. It is found in java.lang package.
+
 ```java
 
 import java.lang.*;
@@ -2548,6 +2742,7 @@ public class TestError9 {
 ##### Try With Resources
 
 Try with resources is used to handle the checked exceptions. It is found in java.lang package.
+
 ```java
 import java.lang.*;
 
@@ -2568,6 +2763,7 @@ public class TestError10 {
 ##### Unchecked Exception
 
 Unchecked exception is a subclass of RuntimeException class. It is found in java.lang package.
+
 ```java
 
 import java.lang.*;
@@ -2587,6 +2783,7 @@ public class TestError11 {
 ##### User Defined Exception
 
 User defined exception is a subclass of Exception class. It is found in java.lang package.
+
 ```java
 import java.lang.*;
 
@@ -2605,6 +2802,7 @@ public class TestError12 {
 ##### Checked Exception
 
 Checked exception is a subclass of Exception class. It is found in java.lang package.
+
 ```java
 
 import java.lang.*;
@@ -2624,7 +2822,9 @@ public class TestError13 {
 ---
 
 #### Calling external APIs
+
 To call external APIS like https://jsonplaceholder.typicode.com/posts, we need to use the following code:
+
 ```java
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -2657,7 +2857,9 @@ public class TestAPI {
 ---
 
 #### Calling external APIs with parameters
+
 To call external APIS like https://jsonplaceholder.typicode.com/posts, we need to use the following code:
+
 ```java
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -2689,11 +2891,10 @@ public class TestAPI {
 
 ---
 
-
-
 ##### Scanner Class in Java
 
 Scanner class is used to get the input of the primitive types like int, double, etc. and strings. It is found in java.util package.
+
 ```java
 import java.util.Scanner;
 
@@ -2715,6 +2916,7 @@ public class TestScanner {
 ##### System Class in Java
 
 System class is used to get the input of the primitive types like int, double, etc. and strings. It is found in java.lang package.
+
 ```java
 import java.util.Scanner;
 
@@ -2733,12 +2935,12 @@ public class TestSystem {
 }
 ```
 
-
 ---
 
-####  Regex in Java
+#### Regex in Java
 
 Regex is used to match the pattern of the string. It is found in java.util.regex package.
+
 ```java
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -2758,6 +2960,7 @@ public class TestRegex {
 ```
 
 Example 2:
+
 ```java
 public class Main {
 
@@ -2784,10 +2987,10 @@ public class Main {
 
 ---
 
-
-##### Method reference 
+##### Method reference
 
 Method reference is used to refer method of functional interface. It is compact and easy form of lambda expression. Each time when you are using lambda expression to just referring a method, you can replace your lambda expression with method reference.
+
 ```java
 
 import java.util.*;
@@ -2806,10 +3009,10 @@ public class TestMethodReference {
 
 ---
 
-
 ##### Lambda expression
 
 Lambda expression provides implementation of functional interface. It saves a lot of code. In case of lambda expression, we don't need to define the method again for providing the implementation. Here, we just write the implementation code.
+
 ```java
 import java.util.*;
 
@@ -2832,6 +3035,7 @@ public class TestLambdaExpression {
 ##### Java 8 Stream API
 
 Stream API is used to process collections of objects. It provides a clear and concise way to implement lambda expressions to iterate, filter and extract data from a collection.
+
 ```java
 import java.util.*;
 import java.util.stream.Collectors;
@@ -2854,6 +3058,7 @@ public class TestStreamAPI {
 ##### Java 8 Date Time API
 
 Java 8 Date Time API is introduced to deal with date and time. It is found in java.time package.
+
 ```java
 import java.time.LocalDate;
 import java.time.LocalTime;
@@ -2883,6 +3088,7 @@ public class TestDateTimeAPI {
 ##### Java 8 Optional Class
 
 Optional class is a public final class and used to deal with NullPointerException in Java application. It is a container object which may or may not contain a non-null value. If a value is present, isPresent() will return true and get() will return the value.
+
 ```java
 import java.util.Optional;
 
@@ -2904,6 +3110,7 @@ public class TestOptionalClass {
 ##### Java 8 Default and Static Methods in Interfaces
 
 Java 8 allows us to add non-abstract methods with implementation in interfaces. These methods are known as default methods. We can also declare and define static methods in interfaces.
+
 ```java
 
 interface Vehicle {
@@ -2939,9 +3146,10 @@ public class TestInterface1 implements Vehicle, FourWheeler {
 
 ---
 
-##### Creating files in Java 
+##### Creating files in Java
 
 Java provides a File class to create, delete, rename and write to files. We can also get the properties of a file using this class.
+
 ```java
 import java.io.File;
 import java.io.IOException;
@@ -2967,6 +3175,7 @@ public class TestFile {
 ##### Reading files in Java
 
 Java provides a File class to create, delete, rename and write to files. We can also get the properties of a file using this class.
+
 ```java
 import java.io.File;
 import java.io.IOException;
@@ -2992,6 +3201,7 @@ public class TestFile {
 ##### Writing files in Java
 
 Java provides a File class to create, delete, rename and write to files. We can also get the properties of a file using this class.
+
 ```java
 import java.io.File;
 import java.io.FileWriter;
@@ -3016,6 +3226,7 @@ public class TestFile {
 ##### Java 8 Concurrency API
 
 Java 8 Concurrency API is introduced to deal with concurrency in Java. It provides a simpler and easier way to deal with concurrency. It provides the following features:
+
 - Improved performance
 - Better scalability
 - Better maintainability
@@ -3044,12 +3255,9 @@ public class TestConcurrencyAPI {
 
 ---
 
-
-
 ---
 
-
-##### Package 
+##### Package
 
 A package in Java is used to group related classes. Think of it as a folder in a file directory. We use packages to avoid name conflicts, and to write a better maintainable code. In order to define a package, we use the package keyword at the top of the source file. Package name should be written in all lowercase letters. If we do not specify any package, the classes are placed in the default package. The package statement must be the first statement in the source file. There can be only one package statement in a file, and package declaration should be present in all the source files of the package.
 
