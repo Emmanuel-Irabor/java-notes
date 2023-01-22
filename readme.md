@@ -225,6 +225,125 @@
 
 ---
 
+
+##### Dates
+- LocalDate, LocalTime, LocalDateTime
+```java
+        LocalDate date = LocalDate.now();
+        LocalTime time = LocalTime.now();
+        LocalDateTime dateTime = LocalDateTime.now();
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm:ss");
+        String formattedDateTime = dateTime.format(formatter);
+        System.out.println(formattedDateTime);
+
+        Date date = new Date();
+        SimpleDateFormat formatter = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss");
+        String formattedDateTime = formatter.format(date);
+```
+
+---
+
+#### public vs private
+- public
+    - accessible from anywhere
+- private
+    - accessible only within the class
+
+---
+
+#### static vs non-static
+- static
+    - belongs to the class
+    - can be accessed without creating an object
+- non-static
+    - belongs to the object
+    - can be accessed only after creating an object
+
+Example:
+```java
+class Test {
+    public static void main(String[] args) {
+        // static method
+        Test.test();
+        // non-static method
+        Test t = new Test();
+        t.test();
+    }
+    public static void test() {
+        System.out.println("Hello World");
+    }
+    public void test() {
+        System.out.println("Hello World");
+    }
+}
+```
+
+---
+
+#### Public vs Static
+- public
+    - accessible from anywhere
+- static
+    - belongs to the class
+    - can be accessed without creating an object
+
+Example:
+```java
+class Test {
+    public static void main(String[] args) {
+        // static method
+        Test.test();
+        // non-static method
+        Test t = new Test();
+        t.test();
+    }
+    public static void test() {
+        System.out.println("Hello World");
+    }
+    public void test() {
+        System.out.println("Hello World");
+    }
+}
+```
+
+---
+
+#### Java.lang package
+Note: All the classes in java.lang package are imported by default. So, we don't need to import them explicitly.
+```java
+class Lang{
+    public static void main(String[] args) {
+        // Object class
+        Object obj = new Object();
+        // String class
+        String str = new String("Hello World");
+        // System class
+        System.out.println("Hello World");
+        // Math class
+        int a = Math.abs(-10);
+        // Integer class
+        Integer i = new Integer(10);
+        // Float class
+        Float f = new Float(10.5f);
+        // Double class
+        Double d = new Double(10.5);
+        // Character class
+        Character c = new Character('a');
+        // Boolean class
+        Boolean b = new Boolean(true);
+        // Byte class
+        Byte by = new Byte((byte) 10);
+        // Short class
+        Short s = new Short((short) 10);
+        // Long class
+        Long l = new Long(10);
+    }
+}
+
+```
+
+
+---
 ##### Loops
 - For loop, While loop, Do-While loop, Enhanced for loop (for-each loop)
 ```java
@@ -484,6 +603,30 @@ public class Simple {
 
 ---
 
+
+##### Mixed Data Types
+```java
+        Object[] a = {1, "Hello", 2.5};
+```
+
+---
+
+##### Multidimensional Arrays
+```java
+        int[][] a = {{1, 2}, {3, 4}};
+```
+
+---
+
+##### Jagged Arrays
+```java
+        int[][] a = {{1, 2}, {3, 4, 5}};
+```
+
+---
+
+
+
 ##### Methods
 Methods are a block of code that perform a specific task. Methods are used to perform certain actions, and they are also known as functions. 
     
@@ -553,6 +696,25 @@ public class Student { // class declaration
         s2.name = "Aryan";
         s1.display();
         s2.display();
+    }
+}
+```
+
+---
+
+##### Math Class
+The java.lang.Math class is a part of the Java API. It provides us with a large number of methods that perform mathematical operations on primitive data types. The methods of the Math class are static, so we can call them without creating an object of the Math class.
+
+```java
+public class MathClass {
+    public static void main(String[] args) {
+        System.out.println(Math.abs(-26.7));
+        System.out.println(Math.ceil(7.4));
+        System.out.println(Math.floor(7.4));
+        System.out.println(Math.max(8.6, 5.2));
+        System.out.println(Math.min(8.6, 5.2));
+        System.out.println(Math.pow(5, 3));
+        System.out.println(Math.sqrt(64));
     }
 }
 ```
@@ -1763,3 +1925,338 @@ public class TestIO14 {
 ```
 
 ---
+
+##### Error Handling
+Error handling is a mechanism to handle the run time errors so that normal flow of the application can be maintained. It is found in java.lang package.
+```java
+import java.lang.*;
+
+public class TestError {
+    public static void main(String args[]) {
+        try {
+            int data = 50 / 0;
+        } catch (ArithmeticException e) {
+            System.out.println(e);
+        }
+        System.out.println("rest of the code");
+    }
+}
+```
+
+##### Error
+Error is a subclass of Throwable class. It is found in java.lang package.
+```java
+import java.lang.*;
+
+public class TestError1 {
+    public static void main(String args[]) {
+        try {
+            int data = 50 / 0;
+        } catch (Error e) {
+            System.out.println(e);
+        }
+        System.out.println("rest of the code");
+    }
+}
+```
+
+##### Exception
+Exception is a subclass of Throwable class. It is found in java.lang package.
+```java
+import java.lang.*;
+
+public class TestError2 {
+    public static void main(String args[]) {
+        try {
+            int data = 50 / 0;
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+        System.out.println("rest of the code");
+    }
+}
+```
+
+##### Exception Handling
+Exception handling is a mechanism to handle the run time errors so that normal flow of the application can be maintained. It is found in java.lang package.
+```java
+import java.lang.*;
+
+public class TestError3 {
+    public static void main(String args[]) {
+        try {
+            int data = 50 / 0;
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+        System.out.println("rest of the code");
+    }
+}
+```
+
+##### Exception Propagation
+Exception propagation is a mechanism to propagate the exception to caller method. It is found in java.lang package.
+```java
+import java.lang.*;
+
+public class TestError4 {
+    public static void main(String args[]) {
+        try {
+            int data = 50 / 0;
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+        System.out.println("rest of the code");
+    }
+}
+```
+
+##### Finally Block
+Finally block is used to execute important code such as closing connection, stream etc. It is found in java.lang package.
+```java
+import java.lang.*;
+
+public class TestError5 {
+    public static void main(String args[]) {
+        try {
+            int data = 50 / 0;
+        } catch (Exception e) {
+            System.out.println(e);
+        } finally {
+            System.out.println("finally block is always executed");
+        }
+        System.out.println("rest of the code");
+    }
+}
+```
+
+##### Throw
+
+Throw is used to explicitly throw an exception. It is found in java.lang package.
+```java
+import java.lang.*;
+
+public class TestError6 {
+    static void validate(int age) {
+        if (age < 18)
+            throw new ArithmeticException("not valid");
+        else
+            System.out.println("welcome to vote");
+    }
+
+    public static void main(String args[]) {
+        validate(13);
+        System.out.println("rest of the code...");
+    }
+}
+```
+
+##### Throws
+
+Throws is used to declare an exception. It is found in java.lang package.
+```java
+
+import java.lang.*;
+
+public class TestError7 {
+    static void validate(int age) throws ArithmeticException {
+        if (age < 18)
+            throw new ArithmeticException("not valid");
+        else
+            System.out.println("welcome to vote");
+    }
+
+    public static void main(String args[]) {
+        try {
+            validate(13);
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+        System.out.println("rest of the code...");
+    }
+}
+```
+
+##### Try Catch
+
+Try catch is used to handle the checked exceptions. It is found in java.lang package.
+```java
+import java.lang.*;
+
+public class TestError8 {
+    public static void main(String args[]) {
+        try {
+            int data = 50 / 0;
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+        System.out.println("rest of the code");
+    }
+}
+```
+
+##### Try Catch Finally
+
+Try catch finally is used to handle the checked exceptions. It is found in java.lang package.
+```java
+
+import java.lang.*;
+
+public class TestError9 {
+    public static void main(String args[]) {
+        try {
+            int data = 50 / 0;
+        } catch (Exception e) {
+            System.out.println(e);
+        } finally {
+            System.out.println("finally block is always executed");
+        }
+        System.out.println("rest of the code");
+    }
+}
+```
+
+##### Try With Resources
+
+Try with resources is used to handle the checked exceptions. It is found in java.lang package.
+```java
+import java.lang.*;
+
+public class TestError10 {
+    public static void main(String args[]) {
+        try {
+            int data = 50 / 0;
+        } catch (Exception e) {
+            System.out.println(e);
+        } finally {
+            System.out.println("finally block is always executed");
+        }
+        System.out.println("rest of the code");
+    }
+}
+```
+
+##### Unchecked Exception
+
+Unchecked exception is a subclass of RuntimeException class. It is found in java.lang package.
+```java
+
+import java.lang.*;
+
+public class TestError11 {
+    public static void main(String args[]) {
+        try {
+            int data = 50 / 0;
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+        System.out.println("rest of the code");
+    }
+}
+```
+
+##### User Defined Exception
+
+User defined exception is a subclass of Exception class. It is found in java.lang package.
+```java
+import java.lang.*;
+
+public class TestError12 {
+    public static void main(String args[]) {
+        try {
+            int data = 50 / 0;
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+        System.out.println("rest of the code");
+    }
+}
+```
+
+##### Checked Exception
+
+Checked exception is a subclass of Exception class. It is found in java.lang package.
+```java
+
+import java.lang.*;
+
+public class TestError13 {
+    public static void main(String args[]) {
+        try {
+            int data = 50 / 0;
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+        System.out.println("rest of the code");
+    }
+}
+```
+
+---
+
+#### Calling external APIs
+To call external APIS like https://jsonplaceholder.typicode.com/posts, we need to use the following code:
+```java
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+
+import java.net.URL;
+
+public class TestAPI {
+    public static void main(String[] args) {
+        try {
+            URL url = new URL("https://jsonplaceholder.typicode.com/posts");
+            HttpURLConnection con = (HttpURLConnection) url.openConnection();
+            con.setRequestMethod("GET");
+            BufferedReader in = new BufferedReader(new InputStreamReader(con.getInputStream()));
+            String inputLine;
+            StringBuffer content = new StringBuffer();
+            while ((inputLine = in.readLine()) != null) {
+                content.append(inputLine);
+            }
+            in.close();
+            con.disconnect();
+            System.out.println(content.toString());
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+}
+```
+
+---
+
+#### Calling external APIs with parameters
+To call external APIS like https://jsonplaceholder.typicode.com/posts, we need to use the following code:
+```java
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+
+import java.net.URL;
+
+public class TestAPI {
+    public static void main(String[] args) {
+        try {
+            URL url = new URL("https://jsonplaceholder.typicode.com/posts");
+            HttpURLConnection con = (HttpURLConnection) url.openConnection();
+            con.setRequestMethod("GET");
+            BufferedReader in = new BufferedReader(new InputStreamReader(con.getInputStream()));
+            String inputLine;
+            StringBuffer content = new StringBuffer();
+            while ((inputLine = in.readLine()) != null) {
+                content.append(inputLine);
+            }
+            in.close();
+            con.disconnect();
+            System.out.println(content.toString());
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+}
+```
+
+---
+
