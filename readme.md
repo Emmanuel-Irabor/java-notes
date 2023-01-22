@@ -462,7 +462,7 @@ This is a constant variable that cannot be changed. It is declared using the fin
 ```java
     int a = 10;
     int b = 20;
-    int c = a & b;
+    int c = a & b; // 0
     int d = a | b;
     int e = a ^ b;
     int f = ~a;
@@ -499,15 +499,19 @@ This is a constant variable that cannot be changed. It is declared using the fin
     int a = 10;
     int b = 20;
     int c = a > b ? a : b;
+    System.out.println(c);
+    // output: 20
 ```
 
 ---
 
-#####s Misc operators ( instanceof, -> )
+##### Misc operators ( instanceof, -> )
 
 ```java
     int a = 10;
-    boolean b = a instanceof Integer;
+    boolean b = a instanceof Integer; // this is used to check the type of a variable
+    System.out.println(b);
+    // output: true
 ```
 
 ---
@@ -527,7 +531,9 @@ This is a constant variable that cannot be changed. It is declared using the fin
         long h = 10L; // or 10L Here L is mandatory for long data type
 ```
 
-- Reference data types (String, Array, Class, Interface)
+---
+
+##### Reference data types (String, Array, Class, Interface)
 
 ```java
         // examples of reference data types
