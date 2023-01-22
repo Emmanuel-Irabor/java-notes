@@ -4,7 +4,9 @@
 
     - Install Java on Windows
         - Download Java from Oracle website (https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
-        - Install Java on Windows 10 (https://www3.ntu.edu.sg/home/ehchua/programming/howto/JDK_Howto.html)
+        - Install Java on Windows 10 (https://adoptium.net/installation/)
+        
+![Image description](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/ka2c2pkgcld74rl74lkk.png)
     - Install Java on Linux
         - Install Java on Ubuntu
         - Install Java on CentOS
@@ -13,12 +15,13 @@
         - Install Java on RHEL
         - Install Java on SUSE
     - Install Java on Mac (https://www3.ntu.edu.sg/home/ehchua/programming/howto/JDK_Howto.html)
-        - Install Java on Mac OS X 10.9 (Mavericks)
 
 ---
 
 #### To check if you have the java_home set
 >  echo $JAVA_HOME
+
+![Image description](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/24gv666dvq30z4ej53oz.png)
 
 
 
@@ -46,8 +49,10 @@ Copy the bin folder and go to your path varibales and paste it there OR run the 
 ---
 
 #### Use jshell terminal i.e Java Shell
-to print:
+Run the following command in your terminal:
+```bash
 jshell
+```
 System.out.println("hello world");
 
 ---
@@ -66,6 +71,7 @@ System.out.println("hello world");
 ---
 
 #### How to compile Java program
+Ensure that you are in the same directory as the Test.java file
 
         - javac Test.java
 
@@ -78,6 +84,7 @@ System.out.println("hello world");
 #### Variables
 
 - Primitive data types (int, float, double, char, boolean, byte, short, long) 
+
 | Data type | Size | Range |
 | --- | --- | --- |
 | int | 4 bytes | -2,147,483,648 to 2,147,483,647 |
@@ -90,21 +97,23 @@ System.out.println("hello world");
 | long | 8 bytes | -9,223,372,036,854,775,808 to 9,223,372,036,854,775,807 |
 
 
+```java
+  int a = 10; // 10 is an integer literal
+  float b = 10.5f; // 10.5 is a floating point literal
+  double c = 10.5; // 10.5 is a floating point literal
+  char d = 'a'; // 'a' is a character literal
+  boolean e = true; // true is a boolean literal
+  byte f = 10;
+  short g = 10;
+  long h = 10;
+```
 
-  > int a = 10; // 10 is an integer literal
-  > float b = 10.5f; // 10.5 is a floating point literal
-  > double c = 10.5; // 10.5 is a floating point literal
-  > char d = 'a'; // 'a' is a character literal
-  > boolean e = true; // true is a boolean literal
-  > byte f = 10;
-  > short g = 10;
-  > long h = 10;
 - Reference data types (String, Array, Class, Interface)
 
 ```java
     // examples of reference data types
-    String a = "Hello World";
-    int[] b = {1, 2, 3, 4, 5};
+    String a = "Hello World"; // "Hello World" is a string literal
+    int[] b = {1, 2, 3, 4, 5}; 
     class Test {
         public static void main(String[] args) {
             System.out.println("Hello World");
@@ -144,6 +153,8 @@ Example of valid variable names:
     // reassigning variables
     int a = 10;
     a = 20;
+    System.out.println(a);
+    // output: 20
 ```
 
 ---
@@ -156,6 +167,8 @@ Example of valid variable names:
     a = 10;
     b = 20;
     c = 30;
+    System.out.println(a + b + c);
+    // output: 60
 ```
 
 ---
@@ -177,6 +190,8 @@ Example of valid variable names:
     int a = 10;
     float b = a;
     int c = (int) b;
+    System.out.println(c);
+    // output: 10
 ```
 
 ---
@@ -191,6 +206,8 @@ Example of valid variable names:
     long d = c;
     float e = d;
     double f = e;
+    System.out.println(f);
+    // output: 10.0
 ```
 
 ---
@@ -213,6 +230,7 @@ Example of valid variable names:
     String a = "Hello";
     String b = "World";
     String c = a + b;
+    System.out.println(c);
 ```
 
 ---
@@ -233,6 +251,8 @@ Example of valid variable names:
 ```java
     // string format
     String a = String.format("Hello %s", "World");
+    System.out.println(a);
+    // output: Hello World
 ```
 
 
@@ -277,6 +297,7 @@ public class Main {
         String formattedString = String.format("My name is %s and I'm %d years old.", name, age);
 
         System.out.println(formattedString);
+        // output: My name is Farhan and I'm 27 years old.
     }
 
 }
@@ -287,7 +308,7 @@ public class Main {
 
 ##### String methods
 
-````java
+```java
     // string methods
     String a = "Hello World";
     int b = a.length(); // 11
@@ -323,13 +344,15 @@ public class Main {
 
 ---
 
-##### type of
+##### Type of variable 
+
 ```java
     // type of
     int a = 10;
     String b = "Hello";
     System.out.println(a instanceof Integer);
     System.out.println(b instanceof String);
+    // output: true
 ````
 
 ```java
@@ -354,6 +377,10 @@ This is a constant variable that cannot be changed. It is declared using the fin
     final int d;
     d = 10;
 
+    // a = 20; // error
+    // b = "World"; // error
+    // c = {1, 2, 3, 4, 5, 6}; // error
+
 ```
 
 ---
@@ -363,13 +390,13 @@ This is a constant variable that cannot be changed. It is declared using the fin
 ##### Arithmetic operators ( +, -, \*, /, %, ++, -- )
 
 ```java
-    int a = 10;
+    int a = 10; 
     int b = 20;
-    int c = a + b;
-    int d = a - b;
-    int e = a * b;
-    int f = a / b;
-    int g = a % b;
+    int c = a + b; // 30 
+    int d = a - b; // -10
+    int e = a * b; // 200
+    int f = a / b; // 0 (integer division). To get the correct result, one of the operands must be a double.
+    int g = a % b; // 10
     int h = a++;
     int i = a--;
     int j = ++a;
@@ -393,11 +420,11 @@ This is a constant variable that cannot be changed. It is declared using the fin
 
 ```java
  int a = 10;
- int b = -a;
- int c = +a;
- int d = a++;
+ int b = -a; // -10
+ int c = +a; // 10
+ int d = a++; // 10
  int e = a--;
- boolean f = !a;
+ boolean f = !a; // false
  int g = ~a;
 ```
 
@@ -408,12 +435,12 @@ This is a constant variable that cannot be changed. It is declared using the fin
 ```java
     int a = 10;
     int b = 20;
-    boolean c = a == b;
-    boolean d = a != b;
-    boolean e = a > b;
-    boolean f = a < b;
-    boolean g = a >= b;
-    boolean h = a <= b;
+    boolean c = a == b; // false
+    boolean d = a != b; // true
+    boolean e = a > b; // false
+    boolean f = a < b; // true
+    boolean g = a >= b; // false
+    boolean h = a <= b; // true
 ```
 
 ---
