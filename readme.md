@@ -90,7 +90,60 @@
     }
 ```
 
+
 ---
+
+##### Variable naming conventions
+
+- Variable names must start with a letter (A-Z or a-z), currency character (\$), or an underscore (\_).
+- After the first character, variable names may contain any number of letters, digits, currency characters, or underscores.
+- Variable names are case sensitive (y and Y are different variables).
+- Variable names cannot be the same as Java keywords (like int or class).
+
+Example of valid variable names:
+
+```java
+    int a;
+    int a1;
+    int _a;
+    int $a;
+    int a_b;
+    int aB;
+```
+
+---
+
+##### Reassigning variables
+
+```java
+    // reassigning variables
+    int a = 10;
+    a = 20;
+```
+
+---
+
+##### Declare multiple variables
+
+```java
+    // declare multiple variables
+    int a, b, c;
+    a = 10;
+    b = 20;
+    c = 30;
+```
+
+---
+
+##### Copying variables
+
+```java
+    // copying variables
+    int a = 10;
+    int b = a;
+    System.out.println(b);
+    // output: 10
+```
 
 ##### Type casting
 
@@ -179,21 +232,35 @@ public class Main {
 ````java
     // string methods
     String a = "Hello World";
-    int b = a.length();
-    String c = a.toUpperCase();
-    String d = a.toLowerCase();
-    String e = a.trim();
-    String f = a.substring(0, 5);
-    String g = a.replace("Hello", "Hi");
-    String h = a.concat("!");
-    String i = a.charAt(0);
-    String j = a.indexOf("World");
-    String k = a.lastIndexOf("World");
-    String l = a.startsWith("Hello");
-    String m = a.endsWith("World");
-    String n = a.contains("World");
-    String o = a.split(" ");
+    int b = a.length(); // 11
+    String c = a.toUpperCase(); // HELLO WORLD
+    String d = a.toLowerCase(); // hello world
+    String e = a.trim(); // Hello World
+    String f = a.substring(0, 5); // Hello
+    String g = a.replace("Hello", "Hi"); // Hi World
+    String h = a.concat("!"); // Hello World!
+    String i = a.charAt(0); // H
+    String j = a.indexOf("World"); // 6
+    String k = a.lastIndexOf("World"); 
+    String l = a.startsWith("Hello"); // true
+    String m = a.endsWith("World"); // true
+    String n = a.contains("World"); // true
+    String o = a.split(" "); // ["Hello", "World"]
+    String p = a.split(" ")[0]; // Hello
+    String q = a.split(" ")[1]; // World
+    String z = a.indexOf("World") != -1; // true
 ```
+
+##### String escape characters
+
+```java
+    // string escape characters
+    String a = "Hello\nWorld"; // Hello       - new line
+                                // World
+    String b = "Hello\tWorld"; // Hello   World - tab
+    String c = "Hello\"World"; // Hello"World - double quote
+    String d = "Hello\\World"; // Hello\World - backslash
+``` 
 
 
 ---
@@ -216,6 +283,21 @@ public class Main {
         System.out.println(result instanceof Double);
 ```
 
+
+---
+
+##### Constants
+This is a constant variable that cannot be changed. It is declared using the final keyword.
+```java
+    // constants
+    final int a = 10;
+    final String b = "Hello";
+    final int[] c = {1, 2, 3, 4, 5};
+    final int d;
+    d = 10;
+
+```
+
 ---
 
 #### Operators
@@ -234,6 +316,17 @@ public class Main {
     int i = a--;
     int j = ++a;
     int k = --a;
+```
+
+---
+
+##### Order of operations
+
+```java
+    int a = 10 + 20 * 30; // This is the same as 10 + (20 * 30) = 610. i.e the multiplication is done first and then the addition.
+    int b = (10 + 20) * 30; // This is the same as (10 + 20) = 30 * 30 = 900. i.e the addition is done first and then the multiplication.
+    int c = 10 + 20 * 30 / 40; // This is the same as 10 + (20 * 30) / 40 = 610 / 40 = 15. i.e the multiplication is done first, then the division and then the addition.
+    int d = (10 + 20) * 30 / 40; // This is the same as (10 + 20) = 30 * 30 / 40 = 900 / 40 = 22.5. i.e the addition is done first, then the multiplication and then the division.
 ```
 
 ---
@@ -340,13 +433,13 @@ public class Main {
 
 ```java
         int a = 10;
-        float b = 10.5f;
+        float b = 10.5f; // or 10.5F Here F is mandatory for float data type
         double c = 10.5;
         char d = 'a';
         boolean e = true;
         byte f = 10;
         short g = 10;
-        long h = 10;
+        long h = 10L; // or 10L Here L is mandatory for long data type
 ```
 
 - Reference data types (String, Array, Class, Interface)
@@ -369,7 +462,7 @@ public class Main {
 
 ---
 
-##### Dates
+#####  Dates classes 
 
 - LocalDate, LocalTime, LocalDateTime
 
@@ -1103,7 +1196,7 @@ public class Student { // class declaration
 
 ---
 
-##### Math Class
+##### Math Class Operations
 
 The java.lang.Math class is a part of the Java API. It provides us with a large number of methods that perform mathematical operations on primitive data types. The methods of the Math class are static, so we can call them without creating an object of the Math class.
 
