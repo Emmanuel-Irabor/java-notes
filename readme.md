@@ -17,6 +17,11 @@
 
 ---
 
+#### To check if you have the java_home set
+>  echo $JAVA_HOME
+
+
+
 #### Check if Java is installed
 
     - Check Java version
@@ -30,13 +35,20 @@
 ---
 
 #### How to set Java path
-
+Copy the bin folder and go to your path varibales and paste it there OR run the following commands
     - Set Java path on Windows
         - setx JAVA_HOME "C:\Program Files\Java\jdk1.8.0_131"
     - Set Java path on Linux
         - export JAVA_HOME=/usr/lib/jvm/java-8-oracle
     - Set Java path on Mac
         - export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home
+
+---
+
+#### Use jshell terminal i.e Java Shell
+to print:
+jshell
+System.out.println("hello world");
 
 ---
 
@@ -65,12 +77,25 @@
 
 #### Variables
 
-- Primitive data types (int, float, double, char, boolean, byte, short, long)
-  > int a = 10;
-  > float b = 10.5f;
-  > double c = 10.5;
-  > char d = 'a';
-  > boolean e = true;
+- Primitive data types (int, float, double, char, boolean, byte, short, long) 
+| Data type | Size | Range |
+| --- | --- | --- |
+| int | 4 bytes | -2,147,483,648 to 2,147,483,647 |
+| float | 4 bytes | 3.4e-038 to 3.4e+038 |
+| double | 8 bytes | 1.7e-308 to 1.7e+308 |
+| char | 2 bytes | 0 to 65,536 |
+| boolean | 1 bit | true or false |
+| byte | 1 byte | -128 to 127 |
+| short | 2 bytes | -32,768 to 32,767 |
+| long | 8 bytes | -9,223,372,036,854,775,808 to 9,223,372,036,854,775,807 |
+
+
+
+  > int a = 10; // 10 is an integer literal
+  > float b = 10.5f; // 10.5 is a floating point literal
+  > double c = 10.5; // 10.5 is a floating point literal
+  > char d = 'a'; // 'a' is a character literal
+  > boolean e = true; // true is a boolean literal
   > byte f = 10;
   > short g = 10;
   > long h = 10;
@@ -209,6 +234,39 @@ Example of valid variable names:
     // string format
     String a = String.format("Hello %s", "World");
 ```
+
+
+---
+
+##### NumberFormat
+The NumberFormat class is used to format numbers in a locale-sensitive manner. It provides a number of methods for formatting numbers in different ways.
+
+```java
+    // number format
+    NumberFormat currency = NumberFormat.getCurrencyInstance();
+    String result = currency.format(1234567.891);
+    System.out.println(result);
+    // output: $1,234,567.89
+```
+
+```java
+    // number format
+    NumberFormat percent = NumberFormat.getPercentInstance();
+    String result = percent.format(0.1);
+    System.out.println(result);
+    // output: 10%
+```
+
+```java
+    // number format
+    NumberFormat number = NumberFormat.getNumberInstance();
+    String result = number.format(1234567.891);
+    System.out.println(result);
+    // output: 1,234,567.891
+```
+
+---
+ 
 
 ```java
 public class Main {
@@ -3361,6 +3419,402 @@ package com.javatpoint;
 public class TestPackage {
     public static void main(String[] args) {
         System.out.println("Hello Package");
+    }
+}
+```
+
+---
+
+
+##### Exercise
+ Odd even exercise 
+ ```java
+import java.util.Scanner;
+
+public class OddEven {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter a number: ");
+        int num = sc.nextInt();
+        if (num % 2 == 0)
+            System.out.println("Even");
+        else
+            System.out.println("Odd");
+    }
+}
+```
+
+Example 2: Odd even exercise 
+```java
+public class Main {
+
+    public static void main(String[] args) {
+        int n = 10;
+
+        // get old number{
+        if (n % 2 == 0)
+            System.out.println("Even number");
+         else
+            System.out.println("odd number");
+    }
+}
+
+```
+
+---
+
+##### Exercise
+ Leap year exercise 
+ ```java
+import java.util.Scanner;
+
+public class LeapYear {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter a year: ");
+        int year = sc.nextInt();
+        if (year % 4 == 0)
+            System.out.println("Leap year");
+        else
+            System.out.println("Not a leap year");
+    }
+}
+```
+
+---
+
+##### Exercise
+ Factorial exercise 
+ ```java
+import java.util.Scanner;
+
+public class Factorial {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter a number: ");
+        int num = sc.nextInt();
+        int fact = 1;
+        for (int i = 1; i <= num; i++) {
+            fact = fact * i;
+        }
+        System.out.println("Factorial of " + num + " is: " + fact);
+    }
+}
+```
+
+---
+
+##### Exercise
+ Fibonacci series exercise 
+ ```java
+import java.util.Scanner;
+
+public class Fibonacci {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter a number: ");
+        int num = sc.nextInt();
+        int t1 = 0, t2 = 1;
+        System.out.print("First " + num + " terms: ");
+
+        for (int i = 1; i <= num; ++i) {
+            System.out.print(t1 + " + ");
+
+            int sum = t1 + t2;
+            t1 = t2;
+            t2 = sum;
+        }
+    }
+}
+```
+
+---
+
+##### Exercise
+ Prime number exercise 
+ ```java
+import java.util.Scanner;
+
+public class PrimeNumber {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter a number: ");
+        int num = sc.nextInt();
+        int i, m = 0, flag = 0;
+        m = num / 2;
+        if (num == 0 || num == 1) {
+            System.out.println(num + " is not prime number");
+        } else {
+            for (i = 2; i <= m; i++) {
+                if (num % i == 0) {
+                    System.out.println(num + " is not prime number");
+                    flag = 1;
+                    break;
+                }
+            }
+            if (flag == 0) {
+                System.out.println(num + " is prime number");
+            }
+        }
+    }
+}
+```
+
+---
+
+##### Exercise
+ Palindrome number exercise 
+ ```java
+import java.util.Scanner;
+
+public class PalindromeNumber {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter a number: ");
+        int num = sc.nextInt();
+        int r, sum = 0, temp;
+        temp = num;
+        while (num > 0) {
+            r = num % 10;
+            sum = (sum * 10) + r;
+            num = num / 10;
+        }
+        if (temp == sum)
+            System.out.println(temp + " is a palindrome number");
+        else
+            System.out.println(temp + " is not a palindrome number");
+    }
+}
+```
+
+---
+
+##### Exercise
+ Armstrong number exercise 
+ ```java
+import java.util.Scanner;
+
+public class ArmstrongNumber {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter a number: ");
+        int num = sc.nextInt();
+        int c = 0, a, temp;
+        temp = num;
+        while (num > 0) {
+            a = num % 10;
+            num = num / 10;
+            c = c + (a * a * a);
+        }
+        if (temp == c)
+            System.out.println("armstrong number");
+        else
+            System.out.println("Not armstrong number");
+    }
+}
+```
+
+---
+
+##### Exercise
+ Reverse number exercise 
+ ```java
+import java.util.Scanner;
+
+public class ReverseNumber {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter a number: ");
+        int num = sc.nextInt();
+        int r, sum = 0;
+        while (num > 0) {
+            r = num % 10;
+            sum = (sum * 10) + r;
+            num = num / 10;
+        }
+        System.out.println("Reverse of the number: " + sum);
+    }
+}
+```
+
+---
+
+##### Exercise
+ Sum of digits exercise 
+ ```java
+import java.util.Scanner;
+
+public class SumOfDigits {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter a number: ");
+        int num = sc.nextInt();
+        int r, sum = 0;
+        while (num > 0) {
+            r = num % 10;
+            sum = sum + r;
+            num = num / 10;
+        }
+        System.out.println("Sum of digits: " + sum);
+    }
+}
+```
+
+---
+
+##### Exercise
+ Swap two numbers exercise 
+ ```java
+import java.util.Scanner;
+
+public class SwapTwoNumbers {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter first number: ");
+        int num1 = sc.nextInt();
+        System.out.println("Enter second number: ");
+        int num2 = sc.nextInt();
+        int temp;
+        temp = num1;
+        num1 = num2;
+        num2 = temp;
+        System.out.println("After swapping");
+        System.out.println("First number = " + num1);
+        System.out.println("Second number = " + num2);
+    }
+}
+```
+
+---
+
+##### Exercise
+ Decimal to binary exercise 
+ ```java
+import java.util.Scanner;
+
+public class DecimalToBinary {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter a decimal number: ");
+        int num = sc.nextInt();
+        int binary[] = new int[40];
+        int index = 0;
+        while (num > 0) {
+            binary[index++] = num % 2;
+            num = num / 2;
+        }
+        for (int i = index - 1; i >= 0; i--) {
+            System.out.print(binary[i]);
+        }
+    }
+}
+```
+
+---
+
+##### Exercise
+ Binary to decimal exercise 
+ ```java
+import java.util.Scanner;
+
+public class BinaryToDecimal {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter a binary number: ");
+        int num = sc.nextInt();
+        int decimal = 0, p = 0;
+        while (true) {
+            if (num == 0) {
+                break;
+            } else {
+                int temp = num % 10;
+                decimal += temp * Math.pow(2, p);
+                num = num / 10;
+                p++;
+            }
+        }
+        System.out.println("Decimal number is: " + decimal);
+    }
+}
+```
+
+---
+
+##### Exercise
+ Decimal to octal exercise 
+ ```java
+import java.util.Scanner;
+
+public class DecimalToOctal {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter a decimal number: ");
+        int num = sc.nextInt();
+        int octal[] = new int[100];
+        int index = 0;
+        while (num > 0) {
+            octal[index++] = num % 8;
+            num = num / 8;
+        }
+        for (int i = index - 1; i >= 0; i--) {
+            System.out.print(octal[i]);
+        }
+    }
+}
+```
+
+---
+
+##### Exercise
+ Octal to decimal exercise 
+ ```java
+import java.util.Scanner;
+
+public class OctalToDecimal {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter a octal number: ");
+        int num = sc.nextInt();
+        int decimal = 0, p = 0;
+        while (true) {
+            if (num == 0) {
+                break;
+            } else {
+                int temp = num % 10;
+                decimal += temp * Math.pow(8, p);
+                num = num / 10;
+                p++;
+            }
+        }
+        System.out.println("Decimal number is: " + decimal);
+    }
+}
+```
+
+---
+
+##### Exercise
+ Decimal to hexadecimal exercise 
+ ```java
+import java.util.Scanner;
+
+public class DecimalToHexadecimal {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter a decimal number: ");
+        int num = sc.nextInt();
+        String hex = "";
+        while (num > 0) {
+            int temp = 0;
+            temp = num % 16;
+            if (temp < 10) {
+                hex = temp + hex;
+            } else {
+                hex = (char) (temp + 55) + hex;
+            }
+            num = num / 16;
+        }
+        System.out.println("Hexadecimal number is: " + hex);
     }
 }
 ```
