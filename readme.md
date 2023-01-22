@@ -1,6 +1,76 @@
 #### Java
 
-#### How to install Java
+##### Table of Contents
+
+- [What is Java?](#what-is-java)
+- [How to install Java](#how-to-install-java)
+- [To check if you have the java_home set](#to-check-if-you-have-the-java_home-set)
+- [Check if Java is installed](#check-if-java-is-installed)
+- [How to set Java path](#how-to-set-java-path)
+- [Use jshell terminal i.e Java Shell](#use-jshell-terminal-ie-java-shell)
+- [Write a Java program](#write-a-java-program)
+- [How to compile Java program](#how-to-compile-java-program)
+- [How to run Java program](#how-to-run-java-program)
+- [Variables](#variables)
+- [Reference data types](#reference-data-types)
+- [Variable naming conventions](#variable-naming-conventions)
+- [Reassigning variables](#reassigning-variables)
+- [ Declare multiple variables](#declare-multiple-variables)
+- [ Copying variables](#copying-variables)
+- [Type casting](#type-casting)
+- [Type promotion](#type-promotion)
+- [ Type conversion](#type-conversion)
+- [String concatenation](#string-concatenation)
+- [String comparison](#string-comparison)
+- [ String formatting](#string-formatting)
+- [NumberFormat](#numberformat) 
+- [String methods](#string-methods)
+- [String escape characters](#string-escape-characters)
+- [Type of variables](#type-of-variables)
+- [Constants](#constants)
+- [Data types](#data-types)
+- [Dates classes](#dates-classes)
+- [public vs private](#public-vs-private)
+- [static vs non-static](#static-vs-non-static)
+- [Public vs Static](#public-vs-static)
+- [Java.lang package](#java.lang-package)
+- [Loops](#loops)
+- [ Break and Continue](#break-and-continue)
+- [ Loops and Arrays](#loops-and-arrays)
+- [Loops and Strings](#loops-and-strings)
+- [ Loops using Array streams](#loops-using-array-streams)
+- [Decrements and Increments](#decrements-and-increments)
+- [Conditional Statements](#conditional-statements)
+- [Keywords](#keywords)
+- [Arrays](#arrays)
+- [Operators](#operators)
+- [Control flow statements](#control-flow-statements)
+- [Arrays](#arrays)
+- [Strings](#strings)
+- [Classes](#classes)
+- [Objects](#objects)
+- [Inheritance](#inheritance)
+- [Polymorphism](#polymorphism)
+- [Encapsulation](#encapsulation)
+- [Abstraction](#abstraction)
+- [Interfaces](#interfaces)
+- [Packages](#packages)
+- [Exception handling](#exception-handling)
+- [Collections](#collections)
+- [Generics](#generics)
+- [Multithreading](#multithreading)
+
+
+
+---
+
+#### What is Java? <a name="what-is-java"></a>
+Java is a high-level, class-based, object-oriented programming language that is designed to have as few implementation dependencies as possible. It is a general-purpose programming language intended to let application developers write once, run anywhere (WORA), meaning that compiled Java code can run on all platforms that support Java without the need for recompilation. Java applications are typically compiled to bytecode that can run on any Java virtual machine (JVM) regardless of the underlying computer architecture. The syntax of Java is similar to C and C++, but it has fewer low-level facilities than either of them. As of 2019, Java was one of the most popular programming languages in use according to GitHub, particularly for client-server web applications, with a reported 9 million developers.
+
+
+---
+
+#### How to install Java <a name="how-to-install-java"></a>
 
     - Install Java on Windows
         - Download Java from Oracle website (https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
@@ -18,14 +88,14 @@
 
 ---
 
-#### To check if you have the java_home set
+#### To check if you have the java_home set <a name="to-check-if-you-have-the-java_home-set"></a>
 >  echo $JAVA_HOME
 
 ![Image description](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/24gv666dvq30z4ej53oz.png)
 
 
 
-#### Check if Java is installed
+#### Check if Java is installed <a name="check-if-java-is-installed"></a>
 
     - Check Java version
         - Check Java version on Windows
@@ -37,7 +107,7 @@
 
 ---
 
-#### How to set Java path
+#### How to set Java path <a name="how-to-set-java-path"></a>
 Copy the bin folder and go to your path varibales and paste it there OR run the following commands
     - Set Java path on Windows
         - setx JAVA_HOME "C:\Program Files\Java\jdk1.8.0_131"
@@ -48,7 +118,7 @@ Copy the bin folder and go to your path varibales and paste it there OR run the 
 
 ---
 
-#### Use jshell terminal i.e Java Shell
+#### Use jshell terminal i.e Java Shell <a name="use-jshell-terminal-ie-java-shell"></a>
 Run the following command in your terminal:
 ```bash
 jshell
@@ -57,7 +127,7 @@ System.out.println("hello world");
 
 ---
 
-#### Write a Java program
+#### Write a Java program <a name="write-a-java-program"></a>
 
 ```java
     // Test.java
@@ -70,18 +140,20 @@ System.out.println("hello world");
 
 ---
 
-#### How to compile Java program
+#### How to compile Java program <a name="how-to-compile-java-program"></a>
+
+        -
 Ensure that you are in the same directory as the Test.java file
 
         - javac Test.java
 
-#### How to run Java program
+#### How to run Java program <a name="how-to-run-java-program"></a>
 
         - java Test
 
 ---
 
-#### Variables
+#### Variables <a name="variables"></a>
 
 - Primitive data types (int, float, double, char, boolean, byte, short, long) 
 
@@ -108,7 +180,7 @@ Ensure that you are in the same directory as the Test.java file
   long h = 10;
 ```
 
-- Reference data types (String, Array, Class, Interface)
+##### Reference data types (String, Array, Class, Interface)  <a name="reference-data-types"></a>
 
 ```java
     // examples of reference data types
@@ -127,7 +199,7 @@ Ensure that you are in the same directory as the Test.java file
 
 ---
 
-##### Variable naming conventions
+##### Variable naming conventions <a name="variable-naming-conventions"></a>
 
 - Variable names must start with a letter (A-Z or a-z), currency character (\$), or an underscore (\_).
 - After the first character, variable names may contain any number of letters, digits, currency characters, or underscores.
@@ -147,7 +219,7 @@ Example of valid variable names:
 
 ---
 
-##### Reassigning variables
+##### Reassigning variables <a name="reassigning-variables"></a>
 
 ```java
     // reassigning variables
@@ -159,7 +231,7 @@ Example of valid variable names:
 
 ---
 
-##### Declare multiple variables
+##### Declare multiple variables <a name="declare-multiple-variables"></a>
 
 ```java
     // declare multiple variables
@@ -173,7 +245,7 @@ Example of valid variable names:
 
 ---
 
-##### Copying variables
+##### Copying variables <a name="copying-variables"></a>
 
 ```java
     // copying variables
@@ -183,7 +255,7 @@ Example of valid variable names:
     // output: 10
 ```
 
-##### Type casting
+##### Type casting <a name="type-casting"></a>
 
 ```java
     // type casting
@@ -196,7 +268,7 @@ Example of valid variable names:
 
 ---
 
-##### Type promotion
+##### Type promotion <a name="type-promotion"></a>
 
 ```java
     // type promotion
@@ -212,7 +284,7 @@ Example of valid variable names:
 
 ---
 
-##### Type conversion
+##### Type conversion <a name="type-conversion"></a>
 
 ```java
     // type conversion
@@ -223,7 +295,7 @@ Example of valid variable names:
 
 ---
 
-##### String concatenation
+##### String concatenation <a name="string-concatenation"></a>
 
 ```java
     // string concatenation
@@ -235,7 +307,7 @@ Example of valid variable names:
 
 ---
 
-##### String comparison
+##### String comparison <a name="string-comparison"></a>
 
 ```java
     // string comparison
@@ -246,7 +318,7 @@ Example of valid variable names:
 
 ---
 
-##### String format
+##### String formatting <a name="string-formatting"></a>
 
 ```java
     // string format
@@ -258,7 +330,7 @@ Example of valid variable names:
 
 ---
 
-##### NumberFormat
+##### NumberFormat <a name="numberformat"></a>
 The NumberFormat class is used to format numbers in a locale-sensitive manner. It provides a number of methods for formatting numbers in different ways.
 
 ```java
@@ -306,7 +378,7 @@ public class Main {
 
 ---
 
-##### String methods
+##### String methods <a name="string-methods"></a>
 
 ```java
     // string methods
@@ -330,7 +402,7 @@ public class Main {
     String z = a.indexOf("World") != -1; // true
 ```
 
-##### String escape characters
+##### String escape characters <a name="string-escape-characters"></a>
 
 ```java
     // string escape characters
@@ -344,7 +416,7 @@ public class Main {
 
 ---
 
-##### Type of variable 
+##### Type of variables <a name="type-of-variables"></a>
 
 ```java
     // type of
@@ -367,7 +439,7 @@ public class Main {
 
 ---
 
-##### Constants
+##### Constants <a name="constants"></a>
 This is a constant variable that cannot be changed. It is declared using the final keyword.
 ```java
     // constants
@@ -385,7 +457,7 @@ This is a constant variable that cannot be changed. It is declared using the fin
 
 ---
 
-#### Operators
+#### Operators <a name="operators"></a>
 
 ##### Arithmetic operators ( +, -, \*, /, %, ++, -- )
 
@@ -516,7 +588,7 @@ This is a constant variable that cannot be changed. It is declared using the fin
 
 ---
 
-##### Data Types
+##### Data Types <a name="data-types"></a>
 
 - Primitive data types (int, float, double, char, boolean, byte, short, long)
 
@@ -553,7 +625,7 @@ This is a constant variable that cannot be changed. It is declared using the fin
 
 ---
 
-#####  Dates classes 
+#####  Dates classes  <a name="dates-classes"></a>
 
 - LocalDate, LocalTime, LocalDateTime
 
@@ -572,7 +644,7 @@ This is a constant variable that cannot be changed. It is declared using the fin
 
 ---
 
-#### public vs private
+#### public vs private <a name="public-vs-private"></a>
 
 - public
   - accessible from anywhere
@@ -581,7 +653,7 @@ This is a constant variable that cannot be changed. It is declared using the fin
 
 ---
 
-#### static vs non-static
+#### static vs non-static <a name="static-vs-non-static"></a>
 
 - static
   - belongs to the class
@@ -612,7 +684,7 @@ class Test {
 
 ---
 
-#### Public vs Static
+#### Public vs Static <a name="public-vs-static"></a>
 
 - public
   - accessible from anywhere
@@ -642,7 +714,7 @@ class Test {
 
 ---
 
-#### Java.lang package
+#### Java.lang package <a name="java-lang-package"></a>
 
 Note: All the classes in java.lang package are imported by default. So, we don't need to import them explicitly.
 
@@ -680,7 +752,7 @@ class Lang{
 
 ---
 
-##### Loops
+##### Loops <a name="loops"></a>
 
 - For loop, While loop, Do-While loop, Enhanced for loop (for-each loop)
 
@@ -710,7 +782,7 @@ class Lang{
 
 ---
 
-##### Break and Continue
+##### Break and Continue <a name="break-and-continue"></a>
 
 - Break
 
@@ -736,7 +808,7 @@ class Lang{
 
 ---
 
-##### Loops and Array
+##### Loops and Array <a name="loops-and-array"></a>
 
 ```java
         int[] a = {1, 2, 3, 4, 5};
@@ -762,7 +834,7 @@ class Lang{
         }
 ```
 
-##### Loops and String
+##### Loops and String <a name="loops-and-string"></a>
 
 ```java
         String str = "Hello World";
@@ -788,7 +860,7 @@ class Lang{
         }
 ```
 
-##### Loops using Array streams
+##### Loops using Array streams <a name="loops-using-array-streams"></a>
 
 ```java
 import java.util.Arrays;
@@ -806,7 +878,7 @@ public class Main {
 
 ---
 
-##### Decrements and Increments
+##### Decrements and Increments <a name="decrements-and-increments"></a>
 
 - Pre-increment, Post-increment, Pre-decrement, Post-decrement
 
@@ -824,7 +896,7 @@ public class Main {
 
 ---
 
-##### Conditional Statements
+##### Conditional Statements <a name="conditional-statements"></a>
 
 - If, If-else, If-else-if, Switch
 
@@ -865,7 +937,7 @@ public class Main {
 
 ---
 
-##### Keywords
+##### Keywords <a name="keywords"></a>
 
 - Access Modifiers (public, private, protected, default)
   > The reason for access modifiers is security. It helps us or users no to access variables that you are not suppose to access. For example, if you have a variable that is private, you can only access it within the class. If you have a variable that is public, you can access it anywhere in your program.
@@ -886,7 +958,7 @@ Types of access modifier (Privilege or permission level)
 
 ---
 
-##### Arrays
+##### Arrays <a name="arrays"></a>
 
 Arrays are used to store multiple values in a single variable, instead of declaring separate variables for each value.
 
