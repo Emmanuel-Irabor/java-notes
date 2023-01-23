@@ -45,7 +45,7 @@
 - [ Loops using Array streams](#loops-using-array-streams)
 - [Decrements and Increments](#decrements-and-increments)
 - [Conditional Statements](#conditional-statements)
-- [Keywords](#keywords)
+- [Access Modifiers keywords](#keywords)
 - [Arrays](#arrays)
 - [Ways of creating an array](#ways-of-creating-an-array)
 - [Arrays.toString()](#arraystostring)
