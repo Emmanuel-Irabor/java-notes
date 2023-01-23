@@ -1,5 +1,9 @@
 #### Java
 
+![Image description](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/4sao67jeqat7heumi2wc.png)
+
+    
+
 ##### Table of Contents
 
 - [What is Java?](#what-is-java)
@@ -134,7 +138,7 @@ Java is a high-level, class-based, object-oriented programming language that is 
 
     - Install Java on Windows
         - Download Java from Oracle website (https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
-        - Install Java on Windows 10 (https://adoptium.net/installation/)
+        - Install Java on Windows 10 using OpenJDK(https://adoptium.net/installation/)
 
 
 ![Image description](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/ka2c2pkgcld74rl74lkk.png) - Install Java on Linux - Install Java on Ubuntu - Install Java on CentOS - Install Java on Fedora - Install Java on Debian - Install Java on RHEL - Install Java on SUSE - Install Java on Mac (https://www3.ntu.edu.sg/home/ehchua/programming/howto/JDK_Howto.html)
@@ -144,6 +148,7 @@ Java is a high-level, class-based, object-oriented programming language that is 
 #### To check if you have the java_home set <a name="to-check-if-you-have-the-java_home-set"></a>
 
 > echo $JAVA_HOME
+
 
 ![Image description](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/24gv666dvq30z4ej53oz.png)
 
@@ -161,7 +166,11 @@ Java is a high-level, class-based, object-oriented programming language that is 
 
 #### How to set Java path <a name="how-to-set-java-path"></a>
 
-Copy the bin folder and go to your path varibales and paste it there OR run the following commands - Set Java path on Windows - setx JAVA_HOME "C:\Program Files\Java\jdk1.8.0_131" - Set Java path on Linux - export JAVA_HOME=/usr/lib/jvm/java-8-oracle - Set Java path on Mac - export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home
+- Copy the bin folder and go to your path varibales and paste it there OR run the following commands 
+- Set Java path on Windows 
+- setx JAVA_HOME "C:\Program Files\Java\jdk1.8.0_131" 
+- Set Java path on Linux - export JAVA_HOME=/usr/lib/jvm/java-8-oracle 
+- Set Java path on Mac - export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home
 
 ---
 
@@ -191,8 +200,6 @@ System.out.println("hello world");
 ---
 
 #### How to compile Java program <a name="how-to-compile-java-program"></a>
-
-        -
 
 Ensure that you are in the same directory as the Test.java file
 
