@@ -23,7 +23,7 @@
 - [String concatenation](#string-concatenation)
 - [String comparison](#string-comparison)
 - [ String formatting](#string-formatting)
-- [NumberFormat](#numberformat) 
+- [NumberFormat](#numberformat)
 - [String methods](#string-methods)
 - [String escape characters](#string-escape-characters)
 - [Type of variables](#type-of-variables)
@@ -43,30 +43,90 @@
 - [Conditional Statements](#conditional-statements)
 - [Keywords](#keywords)
 - [Arrays](#arrays)
-- [Operators](#operators)
-- [Control flow statements](#control-flow-statements)
-- [Arrays](#arrays)
-- [Strings](#strings)
-- [Classes](#classes)
+- [Ways of creating an array](#ways-of-creating-an-array)
+- [Arrays.toString()](#arraystostring)
+- [Array Methods](#array-methods)
+- [Arrays and indexes](#arrays-and-indexes)
+- [Mixed Data Types](#mixed-data-types)
+- [Multidimensional Arrays](#multidimensional-arrays)
+- [ Classes and Objects](#classes-and-objects)
 - [Objects](#objects)
+- [Fields](#fields)
+- [Methods](#methods)
+- [Constructors](#constructors)
+- [Class](#class)
+- [ Math Class Operations](#math-class-operations)
+- [Object](#object)
+- [Getters and Setters](#getters-and-setters)
+- [Inheritance](#inheritance)
+- [Method](#method)
+- [toString() Method](#tostring-method)
+- [Method overloading](#method-overloading)
+- [Wrapper Classes](#wrapper-classes)
 - [Inheritance](#inheritance)
 - [Polymorphism](#polymorphism)
-- [Encapsulation](#encapsulation)
 - [Abstraction](#abstraction)
+- [Encapsulation](#encapsulation)
+- [Enums](#enums)
+- [Loop through the enum values with the values() method](#loop-through-the-enum-values-with-the-values-method)
+- [Get the Enum value](#get-the-enum-value)
 - [Interfaces](#interfaces)
-- [Packages](#packages)
-- [Exception handling](#exception-handling)
+- [Exception](#exception)
 - [Collections](#collections)
 - [Generics](#generics)
+- [Iterator](#iterator)
+- [Enumeration](#enumeration)
+- [Comparable](#comparable)
+- [Comparator](#comparator)
 - [Multithreading](#multithreading)
-
-
+- [Thread class](#thread-class)
+- [Runnable interface](#runnable-interface)
+- [Thread states](#thread-states)
+- [Serialization](#serialization)
+- [ I/O](#io)
+- [String Reader](#string-reader)
+- [ String Writer](#string-writer)
+- [ Pushback Reader](#pushback-reader)
+- [Buffered Reader](#buffered-reader)
+- [Buffered Writer](#buffered-writer)
+- [Data Stream](#data-stream)
+- [Error Handling](#error-handling)
+- [Error Handling](#error-handling)
+- [Exception](#exception)
+- [Exception Handling](#exception-handling)
+- [ Exception Propagation](#exception-propagation)
+- [ Finally Block](#finally-block)
+- [Throw](#throw)
+- [Throws](#throws)
+- [Try Catch](#try-catch)
+- [Try Catch Finally](#try-catch-finally)
+- [Try With Resources](#try-with-resources)
+- [Unchecked Exceptions](#unchecked-exceptions)
+- [User Defined Exceptions](#user-defined-exceptions)
+- [Checked Exceptions](#checked-exceptions)
+- [Calling external APIs](#calling-external-apis)
+- [ Calling external APIs with parameters](#calling-external-apis-with-parameters)
+- [Scanner Class in Java](#scanner-class-in-java)
+- [ System Class in Java](#system-class-in-java)
+- [Regex in Java](#regex-in-java)
+- [Method reference](#method-reference)
+- [Lambda expressions](#lambda-expressions)
+- [Java 8 Stream API](#java-8-stream-api)
+- [Java 8 Date Time API](#java-8-date-time-api)
+- [Java 8 Optional Class](#java-8-optional-class)
+- [Java 8 Default and Static Methods in Interfaces](#java-8-default-and-static-methods-in-interfaces)
+- [Creating files in Java](#creating-files-in-java)
+- [Reading files in Java](#reading-files-in-java)
+- [Writing files in Java](#writing-files-in-java)
+- [Java 8 Concurrency API](#java-8-concurrency-api)
+- [Package](#package)
+- [Exercise](#exercise)
 
 ---
 
 #### What is Java? <a name="what-is-java"></a>
-Java is a high-level, class-based, object-oriented programming language that is designed to have as few implementation dependencies as possible. It is a general-purpose programming language intended to let application developers write once, run anywhere (WORA), meaning that compiled Java code can run on all platforms that support Java without the need for recompilation. Java applications are typically compiled to bytecode that can run on any Java virtual machine (JVM) regardless of the underlying computer architecture. The syntax of Java is similar to C and C++, but it has fewer low-level facilities than either of them. As of 2019, Java was one of the most popular programming languages in use according to GitHub, particularly for client-server web applications, with a reported 9 million developers.
 
+Java is a high-level, class-based, object-oriented programming language that is designed to have as few implementation dependencies as possible. It is a general-purpose programming language intended to let application developers write once, run anywhere (WORA), meaning that compiled Java code can run on all platforms that support Java without the need for recompilation. Java applications are typically compiled to bytecode that can run on any Java virtual machine (JVM) regardless of the underlying computer architecture. The syntax of Java is similar to C and C++, but it has fewer low-level facilities than either of them. As of 2019, Java was one of the most popular programming languages in use according to GitHub, particularly for client-server web applications, with a reported 9 million developers.
 
 ---
 
@@ -75,25 +135,17 @@ Java is a high-level, class-based, object-oriented programming language that is 
     - Install Java on Windows
         - Download Java from Oracle website (https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
         - Install Java on Windows 10 (https://adoptium.net/installation/)
-        
-![Image description](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/ka2c2pkgcld74rl74lkk.png)
-    - Install Java on Linux
-        - Install Java on Ubuntu
-        - Install Java on CentOS
-        - Install Java on Fedora
-        - Install Java on Debian
-        - Install Java on RHEL
-        - Install Java on SUSE
-    - Install Java on Mac (https://www3.ntu.edu.sg/home/ehchua/programming/howto/JDK_Howto.html)
+
+
+![Image description](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/ka2c2pkgcld74rl74lkk.png) - Install Java on Linux - Install Java on Ubuntu - Install Java on CentOS - Install Java on Fedora - Install Java on Debian - Install Java on RHEL - Install Java on SUSE - Install Java on Mac (https://www3.ntu.edu.sg/home/ehchua/programming/howto/JDK_Howto.html)
 
 ---
 
 #### To check if you have the java_home set <a name="to-check-if-you-have-the-java_home-set"></a>
->  echo $JAVA_HOME
+
+> echo $JAVA_HOME
 
 ![Image description](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/24gv666dvq30z4ej53oz.png)
-
-
 
 #### Check if Java is installed <a name="check-if-java-is-installed"></a>
 
@@ -108,21 +160,19 @@ Java is a high-level, class-based, object-oriented programming language that is 
 ---
 
 #### How to set Java path <a name="how-to-set-java-path"></a>
-Copy the bin folder and go to your path varibales and paste it there OR run the following commands
-    - Set Java path on Windows
-        - setx JAVA_HOME "C:\Program Files\Java\jdk1.8.0_131"
-    - Set Java path on Linux
-        - export JAVA_HOME=/usr/lib/jvm/java-8-oracle
-    - Set Java path on Mac
-        - export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home
+
+Copy the bin folder and go to your path varibales and paste it there OR run the following commands - Set Java path on Windows - setx JAVA_HOME "C:\Program Files\Java\jdk1.8.0_131" - Set Java path on Linux - export JAVA_HOME=/usr/lib/jvm/java-8-oracle - Set Java path on Mac - export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home
 
 ---
 
 #### Use jshell terminal i.e Java Shell <a name="use-jshell-terminal-ie-java-shell"></a>
+
 Run the following command in your terminal:
+
 ```bash
 jshell
 ```
+
 System.out.println("hello world");
 
 ---
@@ -143,6 +193,7 @@ System.out.println("hello world");
 #### How to compile Java program <a name="how-to-compile-java-program"></a>
 
         -
+
 Ensure that you are in the same directory as the Test.java file
 
         - javac Test.java
@@ -155,19 +206,18 @@ Ensure that you are in the same directory as the Test.java file
 
 #### Variables <a name="variables"></a>
 
-- Primitive data types (int, float, double, char, boolean, byte, short, long) 
+- Primitive data types (int, float, double, char, boolean, byte, short, long)
 
-| Data type | Size | Range |
-| --- | --- | --- |
-| int | 4 bytes | -2,147,483,648 to 2,147,483,647 |
-| float | 4 bytes | 3.4e-038 to 3.4e+038 |
-| double | 8 bytes | 1.7e-308 to 1.7e+308 |
-| char | 2 bytes | 0 to 65,536 |
-| boolean | 1 bit | true or false |
-| byte | 1 byte | -128 to 127 |
-| short | 2 bytes | -32,768 to 32,767 |
-| long | 8 bytes | -9,223,372,036,854,775,808 to 9,223,372,036,854,775,807 |
-
+| Data type | Size    | Range                                                   |
+| --------- | ------- | ------------------------------------------------------- |
+| int       | 4 bytes | -2,147,483,648 to 2,147,483,647                         |
+| float     | 4 bytes | 3.4e-038 to 3.4e+038                                    |
+| double    | 8 bytes | 1.7e-308 to 1.7e+308                                    |
+| char      | 2 bytes | 0 to 65,536                                             |
+| boolean   | 1 bit   | true or false                                           |
+| byte      | 1 byte  | -128 to 127                                             |
+| short     | 2 bytes | -32,768 to 32,767                                       |
+| long      | 8 bytes | -9,223,372,036,854,775,808 to 9,223,372,036,854,775,807 |
 
 ```java
   int a = 10; // 10 is an integer literal
@@ -180,12 +230,12 @@ Ensure that you are in the same directory as the Test.java file
   long h = 10;
 ```
 
-##### Reference data types (String, Array, Class, Interface)  <a name="reference-data-types"></a>
+##### Reference data types (String, Array, Class, Interface) <a name="reference-data-types"></a>
 
 ```java
     // examples of reference data types
     String a = "Hello World"; // "Hello World" is a string literal
-    int[] b = {1, 2, 3, 4, 5}; 
+    int[] b = {1, 2, 3, 4, 5};
     class Test {
         public static void main(String[] args) {
             System.out.println("Hello World");
@@ -195,7 +245,6 @@ Ensure that you are in the same directory as the Test.java file
         public void test();
     }
 ```
-
 
 ---
 
@@ -327,10 +376,10 @@ Example of valid variable names:
     // output: Hello World
 ```
 
-
 ---
 
 ##### NumberFormat <a name="numberformat"></a>
+
 The NumberFormat class is used to format numbers in a locale-sensitive manner. It provides a number of methods for formatting numbers in different ways.
 
 ```java
@@ -358,7 +407,6 @@ The NumberFormat class is used to format numbers in a locale-sensitive manner. I
 ```
 
 ---
- 
 
 ```java
 public class Main {
@@ -392,7 +440,7 @@ public class Main {
     String h = a.concat("!"); // Hello World!
     String i = a.charAt(0); // H
     String j = a.indexOf("World"); // 6
-    String k = a.lastIndexOf("World"); 
+    String k = a.lastIndexOf("World");
     String l = a.startsWith("Hello"); // true
     String m = a.endsWith("World"); // true
     String n = a.contains("World"); // true
@@ -411,8 +459,7 @@ public class Main {
     String b = "Hello\tWorld"; // Hello   World - tab
     String c = "Hello\"World"; // Hello"World - double quote
     String d = "Hello\\World"; // Hello\World - backslash
-``` 
-
+```
 
 ---
 
@@ -425,7 +472,7 @@ public class Main {
     System.out.println(a instanceof Integer);
     System.out.println(b instanceof String);
     // output: true
-````
+```
 
 ```java
    Double result = Math.random() * 100;
@@ -436,11 +483,12 @@ public class Main {
         System.out.println(result instanceof Double);
 ```
 
-
 ---
 
 ##### Constants <a name="constants"></a>
+
 This is a constant variable that cannot be changed. It is declared using the final keyword.
+
 ```java
     // constants
     final int a = 10;
@@ -462,9 +510,9 @@ This is a constant variable that cannot be changed. It is declared using the fin
 ##### Arithmetic operators ( +, -, \*, /, %, ++, -- )
 
 ```java
-    int a = 10; 
+    int a = 10;
     int b = 20;
-    int c = a + b; // 30 
+    int c = a + b; // 30
     int d = a - b; // -10
     int e = a * b; // 200
     int f = a / b; // 0 (integer division). To get the correct result, one of the operands must be a double.
@@ -625,7 +673,7 @@ This is a constant variable that cannot be changed. It is declared using the fin
 
 ---
 
-#####  Dates classes  <a name="dates-classes"></a>
+##### Dates classes <a name="dates-classes"></a>
 
 - LocalDate, LocalTime, LocalDateTime
 
@@ -983,7 +1031,7 @@ Arrays are used to store multiple values in a single variable, instead of declar
 
 ---
 
-##### Ways of creating an array
+##### Ways of creating an array <a name="ways-of-creating-an-array"></a>
 
 1. Declaring an array
 
@@ -1005,7 +1053,7 @@ Arrays are used to store multiple values in a single variable, instead of declar
 
 ---
 
-#### Arrays.toString()
+#### Arrays.toString() <a name="arraystostring"></a>
 
 This method is used to print the array in a readable format.
 
@@ -1022,7 +1070,7 @@ public class Simple {
 
 ---
 
-##### Array Methods
+##### Array Methods <a name="array-methods"></a>
 
 - length
 
@@ -1182,7 +1230,7 @@ public class Simple {
 
 ---
 
-##### Arrays and indexes
+##### Arrays and indexes <a name="arrays-and-indexes"></a>
 
 ```java
         int[] a = {1, 2, 3, 4, 5};
@@ -1197,7 +1245,7 @@ public class Simple {
 
 ---
 
-##### Mixed Data Types
+##### Mixed Data Types <a name="mixed-data-types"></a>
 
 ```java
         Object[] a = {1, "Hello", 2.5};
@@ -1205,7 +1253,8 @@ public class Simple {
 
 ---
 
-##### Multidimensional Arrays
+##### Multidimensional Arrays <a name="multidimensional-arrays"></a>
+
 
 ```java
         int[][] a = {{1, 2}, {3, 4}};
@@ -1221,7 +1270,7 @@ public class Simple {
 
 ---
 
-##### Classes and Objects
+##### Classes and Objects <a name="classes-and-objects"></a>
 
 Classes are the basics of object-oriented programming. A class is a user-defined blueprint or prototype from which objects are created. It represents the set of properties or methods that are common to all objects of one type.
 
@@ -1234,7 +1283,7 @@ public class Student {
 
 ---
 
-##### Objects
+##### Objects <a name="objects"></a>
 
 Objects are the instances of a class. An object contains an address and takes up some space in memory. It can be assigned to a variable.
 
@@ -1258,7 +1307,7 @@ public class Simple {
 
 ---
 
-##### Fields
+##### Fields <a name="fields"></a>
 
 Fields are variables that belong to the class. Fields are also known as attributes or properties.
 
@@ -1282,7 +1331,7 @@ public class Simple {
 
 ---
 
-##### Methods
+##### Methods <a name="methods"></a>
 
 Methods are a block of code that perform a specific task. Methods are used to perform certain actions, and they are also known as functions.
 
@@ -1301,7 +1350,7 @@ public class Simple {
 
 ---
 
-##### Constructors
+##### Constructors <a name="constructors"></a>
 
 Constructors are used to initialize the object. It is called when an object of a class is created. It can be used to set initial values for object attributes.
 
@@ -1331,7 +1380,7 @@ public class Student {
 
 ---
 
-##### Class
+##### Class <a name="class"></a>
 
 A class is a user-defined blueprint or prototype from which objects are created. It represents the set of properties or methods that are common to all objects of one type.
 
@@ -1359,7 +1408,7 @@ public class Student { // class declaration
 
 ---
 
-##### Math Class Operations
+##### Math Class Operations <a name="math-class-operations"></a>
 
 The java.lang.Math class is a part of the Java API. It provides us with a large number of methods that perform mathematical operations on primitive data types. The methods of the Math class are static, so we can call them without creating an object of the Math class.
 
@@ -1379,7 +1428,7 @@ public class MathClass {
 
 ---
 
-##### Object
+##### Object <a name="object"></a>
 
 An object is a basic unit of Object Oriented Programming and represents the real-life entities. A typical java program creates many objects, which as you know, interact by invoking methods.
 
@@ -1405,7 +1454,7 @@ public class Student {
 
 ---
 
-##### Getters and Setters
+##### Getters and Setters <a name="getters-and-setters"></a>
 
 Getters and setters are methods that provide access to the object’s properties. Getters return the value of the property, and setters set the value of the property.
 
@@ -1434,7 +1483,7 @@ public class Student {
 
 ---
 
-##### toString() Method
+##### toString() Method <a name="tostring-method"></a>
 
 The toString() method returns the string representation of the object. If you print any object, java compiler internally invokes the toString() method on the object. So, overriding the toString() method, returns the desired output, it can be the state of an object etc. depending on your implementation.
 
@@ -1460,7 +1509,7 @@ public class Student {
 
 ---
 
-##### Inheritance
+##### Inheritance <a name="inheritance"></a>
 
 Inheritance is a mechanism in which one object acquires all the properties and behaviors of a parent object. It is an important part of OOPs (Object Oriented programming system). It is used to achieve runtime polymorphism.
 
@@ -1497,7 +1546,7 @@ public class Main {
 
 ---
 
-##### Method
+##### Method <a name="method"></a>
 
 A method is a block of code which only runs when it is called. You can pass data, known as parameters, into a method. Methods are used to perform certain actions, and they are also known as functions. In this chapter, we will learn how to create methods with or without parameters, and how to call a method.
 
@@ -1514,7 +1563,7 @@ public class Simple {
 
 ---
 
-#### Method overloading
+#### Method overloading <a name="method-overloading"></a>
 
 Method overloading is a feature that allows a class to have more than one method having the same name, if their argument lists are different. It is similar to constructor overloading in Java, that allows a class to have more than one constructor having different argument lists.
 
@@ -1539,7 +1588,7 @@ public class MethodOverloading {
 
 ---
 
-##### Wrapper Class
+##### Wrapper Class <a name="wrapper-class"></a>
 
 Wrapper classes are used to convert primitive data types into objects. The primitive data types are boolean, char, byte, short, int, long, float, and double. All the wrapper classes are immutable (unchangeable).
 
@@ -1562,7 +1611,7 @@ public class WrapperClass {
 
 ---
 
-##### Inheritance
+##### Inheritance <a name="inheritance"></a>
 
 Inheritance is a mechanism in which one object acquires all the properties and behaviors of a parent object. It is an important part of OOPs (Object Oriented programming system). It is used to achieve runtime polymorphism.
 
@@ -1599,7 +1648,7 @@ public class Main {
 
 ---
 
-##### Polymorphism
+##### Polymorphism <a name="polymorphism"></a>
 
 Polymorphism means "many forms", and it occurs when we have many classes that are related to each other by inheritance.
 
@@ -1638,7 +1687,7 @@ public class Main {
 
 ---
 
-##### Abstraction
+##### Abstraction <a name="abstraction"></a>
 
 Abstraction is a process of hiding the implementation details and showing only functionality to the user. There are two ways to achieve abstraction in java
 
@@ -1672,7 +1721,7 @@ public class TestAbstraction1 {
 
 ---
 
-##### Encapsulation
+##### Encapsulation <a name="encapsulation"></a>
 
 Encapsulation is defined as the wrapping up of data under a single unit. It is the mechanism that binds together code and the data it manipulates.
 
@@ -1734,7 +1783,7 @@ public class TestEncapsulation {
 
 ---
 
-##### Enum
+##### Enums <a name="enums"></a>
 
 Enum is a special "class" that represents a group of constants (unchangeable variables, like final variables).
 
@@ -1755,7 +1804,9 @@ public class Main {
 
 ---
 
-##### Loop through the enum values with the values() method
+##### Loop through the enum values with the values() method <a name="loop-through-the-enum-values-with-the-values-method"></a>
+
+```java
 
 enum Level {
 LOW,
@@ -1771,11 +1822,13 @@ System.out.println(myVar);
 }
 }
 
-````
+```
 
 ---
 
-##### Get the Enum value o
+##### Get the Enum value  <a name="get-the-enum-value"></a>
+
+
 ```java
 enum Level {
     LOW,
@@ -1789,9 +1842,9 @@ public class Main {
         System.out.println(myVar);
     }
 }
-````
+```
 
-##### Interface
+##### Interfaces <a name="interfaces"></a>
 
 An interface is a completely "abstract class" that is used to group related methods with empty bodies:
 
@@ -1823,7 +1876,7 @@ class MyMainClass {
 
 ---
 
-##### Exception
+##### Exception <a name="exception"></a>
 
 An exception is an event, which occurs during the execution of a program, that disrupts the normal flow of the program's instructions.
 
@@ -1843,7 +1896,7 @@ public class TestException {
 
 ---
 
-##### Collection
+##### Collections <a name="collections"></a>
 
 A collection is a group of individual objects represented as a single unit. Java provides a framework that enables us to manipulate a group of objects as a single unit.
 Examples of Collection Framework are:ArrayList, List, Set, Queue, Deque, Map, LinkedList, HashSet, TreeSet, PriorityQueue, ArrayDeque, HashMap, TreeMap, LinkedHashMap, etc.
@@ -2166,7 +2219,7 @@ public class TestCollection16 {
 
 ---
 
-##### Generics
+##### Generics <a id="generics"></a>
 
 The Java Generics is a new feature that was added to the Java programming language in JDK 5. It is a way to achieve strong type checking at compile time. It allows us to parameterize types, the way classes parameterize their members. It is also known as parameterized types, and it provides compile-time type safety that allows programmers to catch invalid types at compile time.
 Examples are: ArrayList, LinkedList, HashSet, TreeSet, HashMap, TreeMap, etc.
@@ -2189,7 +2242,7 @@ public class TestCollection17 {
 }
 ```
 
-##### Iterator
+##### Iterator <a id="iterator"></a>
 
 Iterator is an interface which is used to traverse a collection object. It is present in the java.util package and is used to get the Iterator object. Iterator interface has 3 methods: hasNext(), next(), remove().
 
@@ -2235,7 +2288,7 @@ public class TestCollection19 {
 }
 ```
 
-##### Enumeration
+##### Enumeration <a id="enumeration"></a>
 
 Enumeration is an interface which is used to traverse a collection object. It is present in the java.util package and is used to get the Enumeration object. Enumeration interface has 2 methods: hasMoreElements(), nextElement().
 
@@ -2256,7 +2309,7 @@ public class TestCollection20 {
 }
 ```
 
-##### Comparable
+##### Comparable <a id="comparable"></a>
 
 Comparable is an interface which is used to order the objects of user-defined class. It is present in the java.lang package and contains only one method named compareTo(Object). It provides a single sorting sequence only, i.e., you can sort the elements on the basis of single data member only. It is found in java.lang package.
 
@@ -2295,7 +2348,7 @@ class Student implements Comparable<Student> {
 }
 ```
 
-##### Comparator
+##### Comparator <a id="comparator"></a>
 
 Comparator is an interface which is used to order the objects of user-defined class. It is present in the java.util package and contains only one method named compare(Object, Object). It provides multiple sorting sequences, i.e., you can sort the elements on the basis of multiple data members like name, age, rollno, etc. It is found in java.util package.
 
@@ -2337,7 +2390,7 @@ class AgeComparator implements Comparator<Student> {
 }
 ```
 
-##### Multithreading
+##### Multithreading <a id="multithreading"></a>
 
 Multithreading is a Java feature that allows concurrent execution of two or more parts of a program for maximum utilization of CPU. Each part of such program is called a thread. Thus, threads are light-weight processes within a process.
 
@@ -2357,7 +2410,7 @@ class TestMultitasking1 extends Thread {
 }
 ```
 
-##### Thread class
+##### Thread class <a id="thread-class"></a>
 
 Thread class is present in java.lang package. It provides constructors and methods to create and perform operations on a thread. It is the direct child of Object class.
 
@@ -2376,7 +2429,7 @@ class TestMultitasking2 extends Thread {
 }
 ```
 
-##### Runnable interface
+##### Runnable interface <a id="runnable-interface"></a>
 
 Runnable interface is present in java.lang package. It provides run() method to perform action for a thread. It is the direct child of Object class.
 
@@ -2393,7 +2446,7 @@ class TestMultitasking3 implements Runnable {
 }
 ```
 
-##### Thread states
+##### Thread states <a id="thread-states"></a>
 
 A thread can be in one of the following states:
 
@@ -2404,9 +2457,148 @@ A thread can be in one of the following states:
 5. Time Waiting
 6. Terminated
 
+e.g 1: New state
+
+```java
+class TestMultitasking4 extends Thread {
+    public void run() {
+        System.out.println("task one");
+    }
+    public static void main(String args[]) {
+        TestMultitasking4 t1 = new TestMultitasking4();
+        System.out.println("Name of t1:" + t1.getName());
+        System.out.println("id of t1:" + t1.getId());
+        t1.start();
+        t1.setName("Sonoo Jaiswal");
+        System.out.println("After changing name of t1:" + t1.getName());
+    }
+}
+```
+
+e.g 2: Runnable state
+
+```java
+class TestMultitasking5 extends Thread {
+    public void run() {
+        System.out.println("task one");
+    }
+    public static void main(String args[]) {
+        TestMultitasking5 t1 = new TestMultitasking5();
+        TestMultitasking5 t2 = new TestMultitasking5();
+        System.out.println("Name of t1:" + t1.getName());
+        System.out.println("Name of t2:" + t2.getName());
+        System.out.println("id of t1:" + t1.getId());
+        t1.start();
+        t2.start();
+        t1.setName("Sonoo Jaiswal");
+        System.out.println("After changing name of t1:" + t1.getName());
+    }
+}
+```
+
+e.g 3: Running state
+
+```java
+class TestMultitasking6 extends Thread {
+    public void run() {
+        System.out.println("task one");
+    }
+    public static void main(String args[]) {
+        TestMultitasking6 t1 = new TestMultitasking6();
+        TestMultitasking6 t2 = new TestMultitasking6();
+        System.out.println("Name of t1:" + t1.getName());
+        System.out.println("Name of t2:" + t2.getName());
+        System.out.println("id of t1:" + t1.getId());
+        t1.start();
+        t2.start();
+        t1.setName("Sonoo Jaiswal");
+        System.out.println("After changing name of t1:" + t1.getName());
+    }
+}
+```
+
+e.g 4: Waiting state
+
+```java
+class TestMultitasking7 extends Thread {
+    public void run() {
+        for (int i = 1; i < 5; i++) {
+            try {
+                Thread.sleep(500);
+            } catch (InterruptedException e) {
+                System.out.println(e);
+            }
+            System.out.println(i);
+        }
+    }
+    public static void main(String args[]) {
+        TestMultitasking7 t1 = new TestMultitasking7();
+        TestMultitasking7 t2 = new TestMultitasking7();
+        t1.start();
+        try {
+            t1.join();
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+        t2.start();
+    }
+}
+```
+
+e.g 5: Time Waiting state
+
+```java
+class TestMultitasking8 extends Thread {
+    public void run() {
+        for (int i = 1; i < 5; i++) {
+            try {
+                Thread.sleep(500);
+            } catch (InterruptedException e) {
+                System.out.println(e);
+            }
+            System.out.println(i);
+        }
+    }
+    public static void main(String args[]) {
+        TestMultitasking8 t1 = new TestMultitasking8();
+        TestMultitasking8 t2 = new TestMultitasking8();
+        t1.start();
+        try {
+            t1.join(1500);
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+        t2.start();
+    }
+}
+```
+
+e.g 6: Terminated state
+
+```java
+class TestMultitasking9 extends Thread {
+    public void run() {
+        System.out.println("task one");
+    }
+    public static void main(String args[]) {
+        TestMultitasking9 t1 = new TestMultitasking9();
+        TestMultitasking9 t2 = new TestMultitasking9();
+        System.out.println("Name of t1:" + t1.getName());
+        System.out.println("Name of t2:" + t2.getName());
+        System.out.println("id of t1:" + t1.getId());
+        t1.start();
+        t2.start();
+        t1.setName("Sonoo Jaiswal");
+        System.out.println("After changing name of t1:" + t1.getName());
+    }
+}
+```
+
+
+
 ---
 
-##### Serialization
+##### Serialization <a id="serialization"></a>
 
 Serialization is a mechanism of writing the state of an object into a byte stream. Deserialization is the reverse process where the byte stream is used to recreate the actual Java object in memory. This mechanism is used to persist the object.
 
@@ -2459,7 +2651,7 @@ public class TestDeserialization1 {
 
 ---
 
-##### I/O
+##### I/O <a id="io"></a>
 
 I/O stands for Input/Output. It is a mechanism to communicate between two entities. In Java, I/O is divided into two categories:
 
@@ -2661,7 +2853,7 @@ public class TestIO8 {
 }
 ```
 
-##### String Reader
+##### String Reader <a name="string-reader"></a>
 
 String reader is used to read data from string. It is found in java.io package.
 
@@ -2682,7 +2874,7 @@ public class TestIO9 {
 }
 ```
 
-##### String Writer
+##### String Writer <a name="string-writer"></a>
 
 String writer is used to write data into string. It is found in java.io package.
 
@@ -2700,7 +2892,7 @@ public class TestIO10 {
 }
 ```
 
-##### Pushback Reader
+##### Pushback Reader <a name="pushback-reader"></a>
 
 Pushback reader is used to push back the data into stream. It is found in java.io package.
 
@@ -2727,7 +2919,7 @@ public class TestIO11 {
 }
 ```
 
-##### Buffered Reader
+##### Buffered Reader <a name="buffered-reader"></a>
 
 Buffered reader is used to read data line by line. It is found in java.io package.
 
@@ -2748,7 +2940,7 @@ public class TestIO12 {
 }
 ```
 
-##### Buffered Writer
+##### Buffered Writer <a name="buffered-writer"></a>
 
 Buffered writer is used to write data line by line. It is found in java.io package.
 
@@ -2767,7 +2959,7 @@ public class TestIO13 {
 }
 ```
 
-##### Data Stream
+##### Data Stream <a name="data-stream"></a>
 
 Data stream is used to read and write primitive data types. It is found in java.io package.
 
@@ -2789,7 +2981,7 @@ public class TestIO14 {
 
 ---
 
-##### Error Handling
+##### Error Handling <a name="error-handling"></a>
 
 Error handling is a mechanism to handle the run time errors so that normal flow of the application can be maintained. It is found in java.lang package.
 
@@ -2808,7 +3000,7 @@ public class TestError {
 }
 ```
 
-##### Error
+##### Error Handling <a name="error-handling"></a>
 
 Error is a subclass of Throwable class. It is found in java.lang package.
 
@@ -2827,7 +3019,7 @@ public class TestError1 {
 }
 ```
 
-##### Exception
+##### Exception <a name="exception"></a>
 
 Exception is a subclass of Throwable class. It is found in java.lang package.
 
@@ -2846,7 +3038,7 @@ public class TestError2 {
 }
 ```
 
-##### Exception Handling
+##### Exception Handling <a name="exception-handling"></a>
 
 Exception handling is a mechanism to handle the run time errors so that normal flow of the application can be maintained. It is found in java.lang package.
 
@@ -2865,7 +3057,7 @@ public class TestError3 {
 }
 ```
 
-##### Exception Propagation
+##### Exception Propagation <a name="exception-propagation"></a>
 
 Exception propagation is a mechanism to propagate the exception to caller method. It is found in java.lang package.
 
@@ -2884,7 +3076,7 @@ public class TestError4 {
 }
 ```
 
-##### Finally Block
+##### Finally Block <a name="finally-block"></a>
 
 Finally block is used to execute important code such as closing connection, stream etc. It is found in java.lang package.
 
@@ -2905,7 +3097,7 @@ public class TestError5 {
 }
 ```
 
-##### Throw
+##### Throw <a name="throw"></a>
 
 Throw is used to explicitly throw an exception. It is found in java.lang package.
 
@@ -2927,7 +3119,7 @@ public class TestError6 {
 }
 ```
 
-##### Throws
+##### Throws <a name="throws"></a>
 
 Throws is used to declare an exception. It is found in java.lang package.
 
@@ -2954,7 +3146,7 @@ public class TestError7 {
 }
 ```
 
-##### Try Catch
+##### Try Catch <a name="try-catch"></a>
 
 Try catch is used to handle the checked exceptions. It is found in java.lang package.
 
@@ -2973,7 +3165,7 @@ public class TestError8 {
 }
 ```
 
-##### Try Catch Finally
+##### Try Catch Finally <a name="try-catch-finally"></a>
 
 Try catch finally is used to handle the checked exceptions. It is found in java.lang package.
 
@@ -2995,7 +3187,7 @@ public class TestError9 {
 }
 ```
 
-##### Try With Resources
+##### Try With Resources <a name="try-with-resources"></a>
 
 Try with resources is used to handle the checked exceptions. It is found in java.lang package.
 
@@ -3036,7 +3228,7 @@ public class TestError11 {
 }
 ```
 
-##### User Defined Exception
+##### User Defined Exception <a name="user-defined-exception"></a>
 
 User defined exception is a subclass of Exception class. It is found in java.lang package.
 
@@ -3055,7 +3247,7 @@ public class TestError12 {
 }
 ```
 
-##### Checked Exception
+##### Checked Exception <a name="checked-exception"></a>
 
 Checked exception is a subclass of Exception class. It is found in java.lang package.
 
@@ -3077,7 +3269,7 @@ public class TestError13 {
 
 ---
 
-#### Calling external APIs
+#### Calling external APIs <a name="calling-external-apis"></a>
 
 To call external APIS like https://jsonplaceholder.typicode.com/posts, we need to use the following code:
 
@@ -3112,7 +3304,7 @@ public class TestAPI {
 
 ---
 
-#### Calling external APIs with parameters
+#### Calling external APIs with parameters <a name="calling-external-apis-with-parameters"></a>
 
 To call external APIS like https://jsonplaceholder.typicode.com/posts, we need to use the following code:
 
@@ -3147,7 +3339,7 @@ public class TestAPI {
 
 ---
 
-##### Scanner Class in Java
+##### Scanner Class in Java <a name="scanner-class-in-java"></a>
 
 Scanner class is used to get the input of the primitive types like int, double, etc. and strings. It is found in java.util package.
 
@@ -3169,7 +3361,7 @@ public class TestScanner {
 }
 ```
 
-##### System Class in Java
+##### System Class in Java <a name="system-class-in-java"></a>
 
 System class is used to get the input of the primitive types like int, double, etc. and strings. It is found in java.lang package.
 
@@ -3243,7 +3435,7 @@ public class Main {
 
 ---
 
-##### Method reference
+##### Method reference <a name="method-reference"></a>
 
 Method reference is used to refer method of functional interface. It is compact and easy form of lambda expression. Each time when you are using lambda expression to just referring a method, you can replace your lambda expression with method reference.
 
@@ -3288,7 +3480,7 @@ public class TestLambdaExpression {
 
 ---
 
-##### Java 8 Stream API
+##### Java 8 Stream API <a name="java-8-stream-api"></a>
 
 Stream API is used to process collections of objects. It provides a clear and concise way to implement lambda expressions to iterate, filter and extract data from a collection.
 
@@ -3311,7 +3503,7 @@ public class TestStreamAPI {
 
 ---
 
-##### Java 8 Date Time API
+##### Java 8 Date Time API <a name="java-8-date-time-api"></a>
 
 Java 8 Date Time API is introduced to deal with date and time. It is found in java.time package.
 
@@ -3341,7 +3533,7 @@ public class TestDateTimeAPI {
 
 ---
 
-##### Java 8 Optional Class
+##### Java 8 Optional Class <a name="java-8-optional-class"></a>
 
 Optional class is a public final class and used to deal with NullPointerException in Java application. It is a container object which may or may not contain a non-null value. If a value is present, isPresent() will return true and get() will return the value.
 
@@ -3363,7 +3555,7 @@ public class TestOptionalClass {
 
 ---
 
-##### Java 8 Default and Static Methods in Interfaces
+##### Java 8 Default and Static Methods in Interfaces <a name="java-8-default-and-static-methods-in-interfaces"></a>
 
 Java 8 allows us to add non-abstract methods with implementation in interfaces. These methods are known as default methods. We can also declare and define static methods in interfaces.
 
@@ -3402,7 +3594,7 @@ public class TestInterface1 implements Vehicle, FourWheeler {
 
 ---
 
-##### Creating files in Java
+##### Creating files in Java <a name="creating-files-in-java"></a>
 
 Java provides a File class to create, delete, rename and write to files. We can also get the properties of a file using this class.
 
@@ -3428,7 +3620,7 @@ public class TestFile {
 
 ---
 
-##### Reading files in Java
+##### Reading files in Java <a name="reading-files-in-java"></a>
 
 Java provides a File class to create, delete, rename and write to files. We can also get the properties of a file using this class.
 
@@ -3454,7 +3646,7 @@ public class TestFile {
 
 ---
 
-##### Writing files in Java
+##### Writing files in Java <a name="writing-files-in-java"></a>
 
 Java provides a File class to create, delete, rename and write to files. We can also get the properties of a file using this class.
 
@@ -3479,7 +3671,7 @@ public class TestFile {
 
 ---
 
-##### Java 8 Concurrency API
+##### Java 8 Concurrency API <a name="java-8-concurrency-api"></a>
 
 Java 8 Concurrency API is introduced to deal with concurrency in Java. It provides a simpler and easier way to deal with concurrency. It provides the following features:
 
@@ -3513,7 +3705,7 @@ public class TestConcurrencyAPI {
 
 ---
 
-##### Package
+##### Package <a name="package"></a>
 
 A package in Java is used to group related classes. Think of it as a folder in a file directory. We use packages to avoid name conflicts, and to write a better maintainable code. In order to define a package, we use the package keyword at the top of the source file. Package name should be written in all lowercase letters. If we do not specify any package, the classes are placed in the default package. The package statement must be the first statement in the source file. There can be only one package statement in a file, and package declaration should be present in all the source files of the package.
 
@@ -3530,26 +3722,28 @@ public class TestPackage {
 
 ---
 
-
 ##### Exercise
- Odd even exercise 
- ```java
+
+Odd even exercise
+
+```java
 import java.util.Scanner;
 
 public class OddEven {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Enter a number: ");
-        int num = sc.nextInt();
-        if (num % 2 == 0)
-            System.out.println("Even");
-        else
-            System.out.println("Odd");
-    }
+   public static void main(String[] args) {
+       Scanner sc = new Scanner(System.in);
+       System.out.println("Enter a number: ");
+       int num = sc.nextInt();
+       if (num % 2 == 0)
+           System.out.println("Even");
+       else
+           System.out.println("Odd");
+   }
 }
 ```
 
-Example 2: Odd even exercise 
+Example 2: Odd even exercise
+
 ```java
 public class Main {
 
@@ -3569,358 +3763,386 @@ public class Main {
 ---
 
 ##### Exercise
- Leap year exercise 
- ```java
+
+Leap year exercise
+
+```java
 import java.util.Scanner;
 
 public class LeapYear {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Enter a year: ");
-        int year = sc.nextInt();
-        if (year % 4 == 0)
-            System.out.println("Leap year");
-        else
-            System.out.println("Not a leap year");
-    }
+   public static void main(String[] args) {
+       Scanner sc = new Scanner(System.in);
+       System.out.println("Enter a year: ");
+       int year = sc.nextInt();
+       if (year % 4 == 0)
+           System.out.println("Leap year");
+       else
+           System.out.println("Not a leap year");
+   }
 }
 ```
 
 ---
 
 ##### Exercise
- Factorial exercise 
- ```java
+
+Factorial exercise
+
+```java
 import java.util.Scanner;
 
 public class Factorial {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Enter a number: ");
-        int num = sc.nextInt();
-        int fact = 1;
-        for (int i = 1; i <= num; i++) {
-            fact = fact * i;
-        }
-        System.out.println("Factorial of " + num + " is: " + fact);
-    }
+   public static void main(String[] args) {
+       Scanner sc = new Scanner(System.in);
+       System.out.println("Enter a number: ");
+       int num = sc.nextInt();
+       int fact = 1;
+       for (int i = 1; i <= num; i++) {
+           fact = fact * i;
+       }
+       System.out.println("Factorial of " + num + " is: " + fact);
+   }
 }
 ```
 
 ---
 
 ##### Exercise
- Fibonacci series exercise 
- ```java
+
+Fibonacci series exercise
+
+```java
 import java.util.Scanner;
 
 public class Fibonacci {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Enter a number: ");
-        int num = sc.nextInt();
-        int t1 = 0, t2 = 1;
-        System.out.print("First " + num + " terms: ");
+   public static void main(String[] args) {
+       Scanner sc = new Scanner(System.in);
+       System.out.println("Enter a number: ");
+       int num = sc.nextInt();
+       int t1 = 0, t2 = 1;
+       System.out.print("First " + num + " terms: ");
 
-        for (int i = 1; i <= num; ++i) {
-            System.out.print(t1 + " + ");
+       for (int i = 1; i <= num; ++i) {
+           System.out.print(t1 + " + ");
 
-            int sum = t1 + t2;
-            t1 = t2;
-            t2 = sum;
-        }
-    }
+           int sum = t1 + t2;
+           t1 = t2;
+           t2 = sum;
+       }
+   }
 }
 ```
 
 ---
 
 ##### Exercise
- Prime number exercise 
- ```java
+
+Prime number exercise
+
+```java
 import java.util.Scanner;
 
 public class PrimeNumber {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Enter a number: ");
-        int num = sc.nextInt();
-        int i, m = 0, flag = 0;
-        m = num / 2;
-        if (num == 0 || num == 1) {
-            System.out.println(num + " is not prime number");
-        } else {
-            for (i = 2; i <= m; i++) {
-                if (num % i == 0) {
-                    System.out.println(num + " is not prime number");
-                    flag = 1;
-                    break;
-                }
-            }
-            if (flag == 0) {
-                System.out.println(num + " is prime number");
-            }
-        }
-    }
+   public static void main(String[] args) {
+       Scanner sc = new Scanner(System.in);
+       System.out.println("Enter a number: ");
+       int num = sc.nextInt();
+       int i, m = 0, flag = 0;
+       m = num / 2;
+       if (num == 0 || num == 1) {
+           System.out.println(num + " is not prime number");
+       } else {
+           for (i = 2; i <= m; i++) {
+               if (num % i == 0) {
+                   System.out.println(num + " is not prime number");
+                   flag = 1;
+                   break;
+               }
+           }
+           if (flag == 0) {
+               System.out.println(num + " is prime number");
+           }
+       }
+   }
 }
 ```
 
 ---
 
 ##### Exercise
- Palindrome number exercise 
- ```java
+
+Palindrome number exercise
+
+```java
 import java.util.Scanner;
 
 public class PalindromeNumber {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Enter a number: ");
-        int num = sc.nextInt();
-        int r, sum = 0, temp;
-        temp = num;
-        while (num > 0) {
-            r = num % 10;
-            sum = (sum * 10) + r;
-            num = num / 10;
-        }
-        if (temp == sum)
-            System.out.println(temp + " is a palindrome number");
-        else
-            System.out.println(temp + " is not a palindrome number");
-    }
+   public static void main(String[] args) {
+       Scanner sc = new Scanner(System.in);
+       System.out.println("Enter a number: ");
+       int num = sc.nextInt();
+       int r, sum = 0, temp;
+       temp = num;
+       while (num > 0) {
+           r = num % 10;
+           sum = (sum * 10) + r;
+           num = num / 10;
+       }
+       if (temp == sum)
+           System.out.println(temp + " is a palindrome number");
+       else
+           System.out.println(temp + " is not a palindrome number");
+   }
 }
 ```
 
 ---
 
 ##### Exercise
- Armstrong number exercise 
- ```java
+
+Armstrong number exercise
+
+```java
 import java.util.Scanner;
 
 public class ArmstrongNumber {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Enter a number: ");
-        int num = sc.nextInt();
-        int c = 0, a, temp;
-        temp = num;
-        while (num > 0) {
-            a = num % 10;
-            num = num / 10;
-            c = c + (a * a * a);
-        }
-        if (temp == c)
-            System.out.println("armstrong number");
-        else
-            System.out.println("Not armstrong number");
-    }
+   public static void main(String[] args) {
+       Scanner sc = new Scanner(System.in);
+       System.out.println("Enter a number: ");
+       int num = sc.nextInt();
+       int c = 0, a, temp;
+       temp = num;
+       while (num > 0) {
+           a = num % 10;
+           num = num / 10;
+           c = c + (a * a * a);
+       }
+       if (temp == c)
+           System.out.println("armstrong number");
+       else
+           System.out.println("Not armstrong number");
+   }
 }
 ```
 
 ---
 
 ##### Exercise
- Reverse number exercise 
- ```java
+
+Reverse number exercise
+
+```java
 import java.util.Scanner;
 
 public class ReverseNumber {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Enter a number: ");
-        int num = sc.nextInt();
-        int r, sum = 0;
-        while (num > 0) {
-            r = num % 10;
-            sum = (sum * 10) + r;
-            num = num / 10;
-        }
-        System.out.println("Reverse of the number: " + sum);
-    }
+   public static void main(String[] args) {
+       Scanner sc = new Scanner(System.in);
+       System.out.println("Enter a number: ");
+       int num = sc.nextInt();
+       int r, sum = 0;
+       while (num > 0) {
+           r = num % 10;
+           sum = (sum * 10) + r;
+           num = num / 10;
+       }
+       System.out.println("Reverse of the number: " + sum);
+   }
 }
 ```
 
 ---
 
 ##### Exercise
- Sum of digits exercise 
- ```java
+
+Sum of digits exercise
+
+```java
 import java.util.Scanner;
 
 public class SumOfDigits {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Enter a number: ");
-        int num = sc.nextInt();
-        int r, sum = 0;
-        while (num > 0) {
-            r = num % 10;
-            sum = sum + r;
-            num = num / 10;
-        }
-        System.out.println("Sum of digits: " + sum);
-    }
+   public static void main(String[] args) {
+       Scanner sc = new Scanner(System.in);
+       System.out.println("Enter a number: ");
+       int num = sc.nextInt();
+       int r, sum = 0;
+       while (num > 0) {
+           r = num % 10;
+           sum = sum + r;
+           num = num / 10;
+       }
+       System.out.println("Sum of digits: " + sum);
+   }
 }
 ```
 
 ---
 
 ##### Exercise
- Swap two numbers exercise 
- ```java
+
+Swap two numbers exercise
+
+```java
 import java.util.Scanner;
 
 public class SwapTwoNumbers {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Enter first number: ");
-        int num1 = sc.nextInt();
-        System.out.println("Enter second number: ");
-        int num2 = sc.nextInt();
-        int temp;
-        temp = num1;
-        num1 = num2;
-        num2 = temp;
-        System.out.println("After swapping");
-        System.out.println("First number = " + num1);
-        System.out.println("Second number = " + num2);
-    }
+   public static void main(String[] args) {
+       Scanner sc = new Scanner(System.in);
+       System.out.println("Enter first number: ");
+       int num1 = sc.nextInt();
+       System.out.println("Enter second number: ");
+       int num2 = sc.nextInt();
+       int temp;
+       temp = num1;
+       num1 = num2;
+       num2 = temp;
+       System.out.println("After swapping");
+       System.out.println("First number = " + num1);
+       System.out.println("Second number = " + num2);
+   }
 }
 ```
 
 ---
 
 ##### Exercise
- Decimal to binary exercise 
- ```java
+
+Decimal to binary exercise
+
+```java
 import java.util.Scanner;
 
 public class DecimalToBinary {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Enter a decimal number: ");
-        int num = sc.nextInt();
-        int binary[] = new int[40];
-        int index = 0;
-        while (num > 0) {
-            binary[index++] = num % 2;
-            num = num / 2;
-        }
-        for (int i = index - 1; i >= 0; i--) {
-            System.out.print(binary[i]);
-        }
-    }
+   public static void main(String[] args) {
+       Scanner sc = new Scanner(System.in);
+       System.out.println("Enter a decimal number: ");
+       int num = sc.nextInt();
+       int binary[] = new int[40];
+       int index = 0;
+       while (num > 0) {
+           binary[index++] = num % 2;
+           num = num / 2;
+       }
+       for (int i = index - 1; i >= 0; i--) {
+           System.out.print(binary[i]);
+       }
+   }
 }
 ```
 
 ---
 
 ##### Exercise
- Binary to decimal exercise 
- ```java
+
+Binary to decimal exercise
+
+```java
 import java.util.Scanner;
 
 public class BinaryToDecimal {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Enter a binary number: ");
-        int num = sc.nextInt();
-        int decimal = 0, p = 0;
-        while (true) {
-            if (num == 0) {
-                break;
-            } else {
-                int temp = num % 10;
-                decimal += temp * Math.pow(2, p);
-                num = num / 10;
-                p++;
-            }
-        }
-        System.out.println("Decimal number is: " + decimal);
-    }
+   public static void main(String[] args) {
+       Scanner sc = new Scanner(System.in);
+       System.out.println("Enter a binary number: ");
+       int num = sc.nextInt();
+       int decimal = 0, p = 0;
+       while (true) {
+           if (num == 0) {
+               break;
+           } else {
+               int temp = num % 10;
+               decimal += temp * Math.pow(2, p);
+               num = num / 10;
+               p++;
+           }
+       }
+       System.out.println("Decimal number is: " + decimal);
+   }
 }
 ```
 
 ---
 
 ##### Exercise
- Decimal to octal exercise 
- ```java
+
+Decimal to octal exercise
+
+```java
 import java.util.Scanner;
 
 public class DecimalToOctal {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Enter a decimal number: ");
-        int num = sc.nextInt();
-        int octal[] = new int[100];
-        int index = 0;
-        while (num > 0) {
-            octal[index++] = num % 8;
-            num = num / 8;
-        }
-        for (int i = index - 1; i >= 0; i--) {
-            System.out.print(octal[i]);
-        }
-    }
+   public static void main(String[] args) {
+       Scanner sc = new Scanner(System.in);
+       System.out.println("Enter a decimal number: ");
+       int num = sc.nextInt();
+       int octal[] = new int[100];
+       int index = 0;
+       while (num > 0) {
+           octal[index++] = num % 8;
+           num = num / 8;
+       }
+       for (int i = index - 1; i >= 0; i--) {
+           System.out.print(octal[i]);
+       }
+   }
 }
 ```
 
 ---
 
 ##### Exercise
- Octal to decimal exercise 
- ```java
+
+Octal to decimal exercise
+
+```java
 import java.util.Scanner;
 
 public class OctalToDecimal {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Enter a octal number: ");
-        int num = sc.nextInt();
-        int decimal = 0, p = 0;
-        while (true) {
-            if (num == 0) {
-                break;
-            } else {
-                int temp = num % 10;
-                decimal += temp * Math.pow(8, p);
-                num = num / 10;
-                p++;
-            }
-        }
-        System.out.println("Decimal number is: " + decimal);
-    }
+   public static void main(String[] args) {
+       Scanner sc = new Scanner(System.in);
+       System.out.println("Enter a octal number: ");
+       int num = sc.nextInt();
+       int decimal = 0, p = 0;
+       while (true) {
+           if (num == 0) {
+               break;
+           } else {
+               int temp = num % 10;
+               decimal += temp * Math.pow(8, p);
+               num = num / 10;
+               p++;
+           }
+       }
+       System.out.println("Decimal number is: " + decimal);
+   }
 }
 ```
 
 ---
 
 ##### Exercise
- Decimal to hexadecimal exercise 
- ```java
+
+Decimal to hexadecimal exercise
+
+```java
 import java.util.Scanner;
 
 public class DecimalToHexadecimal {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Enter a decimal number: ");
-        int num = sc.nextInt();
-        String hex = "";
-        while (num > 0) {
-            int temp = 0;
-            temp = num % 16;
-            if (temp < 10) {
-                hex = temp + hex;
-            } else {
-                hex = (char) (temp + 55) + hex;
-            }
-            num = num / 16;
-        }
-        System.out.println("Hexadecimal number is: " + hex);
-    }
+   public static void main(String[] args) {
+       Scanner sc = new Scanner(System.in);
+       System.out.println("Enter a decimal number: ");
+       int num = sc.nextInt();
+       String hex = "";
+       while (num > 0) {
+           int temp = 0;
+           temp = num % 16;
+           if (temp < 10) {
+               hex = temp + hex;
+           } else {
+               hex = (char) (temp + 55) + hex;
+           }
+           num = num / 16;
+       }
+       System.out.println("Hexadecimal number is: " + hex);
+   }
 }
 ```
 
