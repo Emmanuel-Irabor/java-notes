@@ -2,8 +2,6 @@
 
 ![Image description](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/4sao67jeqat7heumi2wc.png)
 
-    
-
 ##### Table of Contents
 
 - [What is Java?](#what-is-java)
@@ -140,7 +138,6 @@ Java is a high-level, class-based, object-oriented programming language that is 
         - Download Java from Oracle website (https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
         - Install Java on Windows 10 using OpenJDK(https://adoptium.net/installation/)
 
-
 ![Image description](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/ka2c2pkgcld74rl74lkk.png) - Install Java on Linux - Install Java on Ubuntu - Install Java on CentOS - Install Java on Fedora - Install Java on Debian - Install Java on RHEL - Install Java on SUSE - Install Java on Mac (https://www3.ntu.edu.sg/home/ehchua/programming/howto/JDK_Howto.html)
 
 ---
@@ -148,7 +145,6 @@ Java is a high-level, class-based, object-oriented programming language that is 
 #### To check if you have the java_home set <a name="to-check-if-you-have-the-java_home-set"></a>
 
 > echo $JAVA_HOME
-
 
 ![Image description](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/24gv666dvq30z4ej53oz.png)
 
@@ -166,10 +162,10 @@ Java is a high-level, class-based, object-oriented programming language that is 
 
 #### How to set Java path <a name="how-to-set-java-path"></a>
 
-- Copy the bin folder and go to your path varibales and paste it there OR run the following commands 
-- Set Java path on Windows 
-- setx JAVA_HOME "C:\Program Files\Java\jdk1.8.0_131" 
-- Set Java path on Linux - export JAVA_HOME=/usr/lib/jvm/java-8-oracle 
+- Copy the bin folder and go to your path varibales and paste it there OR run the following commands
+- Set Java path on Windows
+- setx JAVA_HOME "C:\Program Files\Java\jdk1.8.0_131"
+- Set Java path on Linux - export JAVA_HOME=/usr/lib/jvm/java-8-oracle
 - Set Java path on Mac - export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home
 
 ---
@@ -445,16 +441,6 @@ public class Main {
     String f = a.substring(0, 5); // Hello
     String g = a.replace("Hello", "Hi"); // Hi World
     String h = a.concat("!"); // Hello World!
-    String i = a.charAt(0); // H
-    String j = a.indexOf("World"); // 6
-    String k = a.lastIndexOf("World");
-    String l = a.startsWith("Hello"); // true
-    String m = a.endsWith("World"); // true
-    String n = a.contains("World"); // true
-    String o = a.split(" "); // ["Hello", "World"]
-    String p = a.split(" ")[0]; // Hello
-    String q = a.split(" ")[1]; // World
-    String z = a.indexOf("World") != -1; // true
 ```
 
 ##### String escape characters <a name="string-escape-characters"></a>
@@ -551,7 +537,6 @@ This is a constant variable that cannot be changed. It is declared using the fin
  int c = +a; // 10
  int d = a++; // 10
  int e = a--;
- boolean f = !a; // false
  int g = ~a;
 ```
 
@@ -577,9 +562,9 @@ This is a constant variable that cannot be changed. It is declared using the fin
 ```java
     int a = 10;
     int b = 20;
-    boolean c = a > 5 && b > 5;
-    boolean d = a > 5 || b > 5;
-    boolean e = !(a > 5);
+    boolean c = a > 5 && b > 5; // true
+    boolean d = a > 5 || b > 5; // true
+    boolean e = !(a > 5); // false
 ```
 
 ---
@@ -620,7 +605,7 @@ This is a constant variable that cannot be changed. It is declared using the fin
 
 ---
 
-##### Ternary operators ( ?: )
+##### Ternary operators ( ? : )
 
 ```java
     int a = 10;
@@ -632,12 +617,12 @@ This is a constant variable that cannot be changed. It is declared using the fin
 
 ---
 
-##### Misc operators ( instanceof, -> )
+##### Misc operators ( instanceof )
 
 ```java
-    int a = 10;
-    boolean b = a instanceof Integer; // this is used to check the type of a variable
-    System.out.println(b);
+     Integer a = 10;
+        boolean b = a instanceof Integer; // this is used to check the type of a variable
+        System.out.println(b);
     // output: true
 ```
 
@@ -720,19 +705,46 @@ This is a constant variable that cannot be changed. It is declared using the fin
 Example:
 
 ```java
-class Test {
+class Student {
+    String name;
+    int rollNo;
+    static String collegeName = "ABC College";
     public static void main(String[] args) {
         // static method
-        Test.test();
+        Student.test();
         // non-static method
-        Test t = new Test();
-        t.test();
+        Student s = new Student();
+        s.test();
     }
     public static void test() {
         System.out.println("Hello World");
     }
     public void test() {
         System.out.println("Hello World");
+    }
+}
+```
+
+Example 2:
+
+```java
+class Main {
+    public static void main(String[] args) {
+        // STATIC
+        // 1. Static method can be called without creating an object
+        Main.run();
+        // 2. Non-static method can't be called without creating an object
+        // Main.crawl(); // Error
+        Main obj = new Main();
+        obj.crawl();
+    }
+
+    public static void run() {
+        System.out.println("runnig");
+    }
+
+    public void crawl() {
+        System.out.println("crawling");
     }
 }
 ```
@@ -785,11 +797,11 @@ class Lang{
         // Math class
         int a = Math.abs(-10);
         // Integer class
-        Integer i = new Integer(10);
+        Integer i = new Integer(10); // deprecated
         // Float class
-        Float f = new Float(10.5f);
+        Float f = new Float(10.5f); // deprecated
         // Double class
-        Double d = new Double(10.5);
+        Double d = new Double(10.5); // deprecated
         // Character class
         Character c = new Character('a');
         // Boolean class
@@ -1111,8 +1123,18 @@ public class Simple {
 - sort
 
 ```java
-        int[] a = {5, 4, 3, 2, 1};
-        Arrays.sort(a);
+import java.util.Arrays;
+
+class Main {
+    public static void main(String[] args) {
+        int[] numbers = { 3,1,89,23 };
+        // sort the array
+        Arrays.sort(numbers);
+        // print the array
+        System.out.println(Arrays.toString(numbers));
+
+    }
+}
 ```
 
 - toString
@@ -1125,8 +1147,9 @@ public class Simple {
 - binarySearch
 
 ```java
-        int[] a = {1, 2, 3, 4, 5};
-        System.out.println(Arrays.binarySearch(a, 3));
+               int[] a = { 1, 2, 3, 4, 5 };
+        System.out.println(Arrays.binarySearch(a, 4)); // this will print 3 (index of 4)
+
 ```
 
 - copyOf
@@ -1261,7 +1284,6 @@ public class Simple {
 ---
 
 ##### Multidimensional Arrays <a name="multidimensional-arrays"></a>
-
 
 ```java
         int[][] a = {{1, 2}, {3, 4}};
@@ -1833,8 +1855,7 @@ System.out.println(myVar);
 
 ---
 
-##### Get the Enum value  <a name="get-the-enum-value"></a>
-
+##### Get the Enum value <a name="get-the-enum-value"></a>
 
 ```java
 enum Level {
@@ -2600,8 +2621,6 @@ class TestMultitasking9 extends Thread {
     }
 }
 ```
-
-
 
 ---
 
@@ -4154,3 +4173,17 @@ public class DecimalToHexadecimal {
 ```
 
 ---
+
+#### Reference 
+
+[Java Programming Tutorial](https://www.javatpoint.com/java-tutorial)
+
+[Java Programming Tutorial](https://www.tutorialspoint.com/java/index.htm)
+
+[Java Programming Tutorial](https://www.w3schools.com/java/default.asp)
+
+[Java Programming Tutorial](https://www.geeksforgeeks.org/java/)
+
+<!-- mike dane java basic -->
+
+[Java Programming Tutorial](https://www.youtube.com/watch?v=grEKMHGYyns)
